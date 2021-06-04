@@ -7,6 +7,7 @@ startBtn.addEventListener('click', () => {
 	// display now playing section
 	document.querySelector('.landing').classList.remove('section-active');
 	document.querySelector('.now-playing').classList.add('section-active');
+	playMusic();
 });
 backBtn.addEventListener('click', () => {
 	// show landing page
@@ -167,6 +168,16 @@ function nextSong() {
 
 // Event listeners
 playBtn.addEventListener('click', () => {
+	// const isPlaying = recordContainer.classList.contains('play');
+
+	// if (isPlaying) {
+	// 	pauseSong();
+	// } else {
+	// 	playSong();
+	// }
+	playMusic();
+});
+function playMusic() {
 	const isPlaying = recordContainer.classList.contains('play');
 
 	if (isPlaying) {
@@ -174,7 +185,7 @@ playBtn.addEventListener('click', () => {
 	} else {
 		playSong();
 	}
-});
+}
 
 // Change song
 prevBtn.addEventListener('click', prevSong);
