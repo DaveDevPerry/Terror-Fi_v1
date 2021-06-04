@@ -1,0 +1,107 @@
+.now-playing {
+	height: 100%;
+	width: 100%;
+
+	@include flex(flex-end, center, column);
+	display: none;
+	header {
+		height: 15rem;
+		width: 100%;
+		@include flex(space-between, center, row);
+		padding: 0 2rem;
+		// margin-bottom: 2rem;
+		// background-color: yellow;
+		// border-radius: 5rem 5rem 0 0;
+		.circle-wrapper {
+			height: 5rem;
+			width: 5rem;
+			display: grid;
+			place-content: center;
+			background-color: rgb(51, 51, 51);
+			.fa-angle-left {
+				font-size: 3rem;
+			}
+			.fa-bars {
+				font-size: 2.2rem;
+			}
+		}
+	}
+	.content-wrapper {
+		height: 100%;
+		width: 100%;
+		@include flex(center, center, column);
+		.media-container {
+			// height: 60%;
+			width: 100%;
+			background-color: rgb(51, 51, 51);
+			padding: 4rem 2rem;
+			display: grid;
+			place-content: center;
+			.circle-wrapper.record {
+				height: 24rem;
+				width: 24rem;
+				display: grid;
+				place-content: center;
+				#cover {
+					height: 24rem;
+					width: 24rem;
+					border-radius: 50%;
+					animation: rotate 10s linear infinite;
+
+					animation-play-state: paused;
+				}
+			}
+			.circle-wrapper.record.play #cover {
+				animation-play-state: running;
+			}
+		}
+		.song-details {
+			// height: 100%;
+			// height: 40%;
+			width: 100%;
+			padding: 6rem 2rem;
+			text-align: center;
+		}
+	}
+
+	footer {
+		height: 20rem;
+		width: 100%;
+		background-color: rgb(51, 51, 51);
+		.player-controls {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			// z-index: 1;
+			.action-btn {
+				background-color: transparent;
+				border: 0;
+				// color: #dfdbdf;
+				font-size: 2rem;
+				// border-radius: 50%;
+				// height: 5rem;
+				// width: 5rem;
+				cursor: pointer;
+
+				padding: 1rem;
+				margin: 0 20px;
+			}
+			#play {
+				background-color: red;
+				border-radius: 50%;
+				height: 7rem;
+				width: 7rem;
+			}
+
+			.action-btn.action-btn-big {
+				color: white;
+				font-size: 30px;
+			}
+
+			.action-btn:focus {
+				outline: 0;
+			}
+		}
+	}
+}

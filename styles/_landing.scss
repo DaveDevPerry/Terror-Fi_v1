@@ -1,0 +1,29 @@
+.landing {
+	height: 100%;
+	width: 100%;
+
+	@include flex(flex-end, center, column);
+	display: none;
+	// background-color: yellow;
+	.circle-wrapper {
+		height: 13rem;
+		width: 13rem;
+		position: relative;
+		cursor: pointer;
+		.fa-play {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-40%, -50%);
+			color: rgb(190, 190, 190);
+			font-size: 6rem;
+		}
+	}
+	#brand {
+		margin: 10rem auto;
+		color: rgb(190, 190, 190);
+		font-size: 6rem;
+		// text-transform: uppercase;
+		letter-spacing: 0.2rem;
+	}
+}

@@ -12,8 +12,84 @@
     <title>Music Player</title>
   </head>
   <body>
+
+
+
+    <div class="container">
+      <div class="background"></div>
+
+      <section class="loader">
+
+      </section>
+
+
+      <section class="landing section section-active">
+        <div class="circle-wrapper">
+          <i class="fas fa-play"></i>
+        </div>
+<h1 id="brand">Terror-Fi</h1>
+      </section>
+
+
+<section class="now-playing  section">
+
+  <header>
+    <div class="circle-wrapper" id="t-back-btn">
+      <i class="fas fa-angle-left"></i>
+    </div>
+    <h5 class="page-heading">Now Playing</h5>
+    <div class="circle-wrapper" id="menu">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+<div class="content-wrapper">
+
+  <div class="media-container shadow">
+    <div class="circle-wrapper record">
+      
+        <img src="./images/04 Discotheque Wreck.jpg" alt="music-cover" id="cover" />
+      
+      
+    </div>
+  </div>
+
+
+  <div class="song-details">
+    <div class="music-info">
+      <h2 class="song-title" id="title"></h2>
+      <h3 class="artist">Terrorvision</h3>
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+    <!-- <h2 class="song-title" id="title">Alice, What's the matter?</h2> -->
+    <!-- <h3 class="artist">Terrorvision</h3> -->
+  </div>
+
+</div>
+  <footer>
+    <div class="player-controls">
+      <button id="prev" class="action-btn">
+        <i class="fas fa-backward"></i>
+      </button>
+      <button id="play" class="action-btn action-btn-big">
+        <i class="fas fa-play"></i>
+      </button>
+      <button id="next" class="action-btn">
+        <i class="fas fa-forward"></i>
+      </button>
+
+    </div>
+  </footer>
+</section>
+<div class="music-container" id="music-container">
+  <audio src="./music/04 Discotheque Wreck.mp3" id="audio"></audio>
+</div>
+
+
+    </div>
     
-    <h1>Music Player</h1>
+    <!-- <h1>Music Player</h1>
 
     <div class="music-container" id="music-container">
       <div class="music-info">
@@ -39,7 +115,7 @@
           <i class="fas fa-forward"></i>
         </button>
       </div>
-    </div>
+    </div> -->
 
 
 
