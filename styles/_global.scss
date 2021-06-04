@@ -15,12 +15,13 @@ body {
 }
 
 .container {
-	width: 37.5rem;
+	// width: 37.5rem;
 	// height: 81rem;
+	width: 100vh;
 	height: 100vh;
 	background-color: rgb(83, 83, 83);
 	// border: 1rem solid red;
-	border-radius: 5rem;
+	// border-radius: 5rem;
 	margin: auto;
 	overflow: hidden;
 	position: relative;

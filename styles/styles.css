@@ -20,10 +20,9 @@ body {
 }
 
 .container {
-  width: 37.5rem;
+  width: 100vh;
   height: 100vh;
   background-color: #535353;
-  border-radius: 5rem;
   margin: auto;
   overflow: hidden;
   position: relative;
