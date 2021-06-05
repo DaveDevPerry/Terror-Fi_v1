@@ -29,7 +29,8 @@ container.addEventListener('click', function () {
 		x = 0;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		analyser.getByteFrequencyData(dataArray);
-		drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
+		// drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
+		drawVisualiserCircle(bufferLength, x, barWidth, barHeight, dataArray);
 		requestAnimationFrame(animate);
 	}
 	animate();
@@ -59,7 +60,8 @@ file.addEventListener('change', function () {
 		x = 0;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		analyser.getByteFrequencyData(dataArray);
-		drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
+		// drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
+		drawVisualiserCircle(bufferLength, x, barWidth, barHeight, dataArray);
 		requestAnimationFrame(animate);
 	}
 	animate();
@@ -101,6 +103,24 @@ function drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray) {
 		ctx.fillStyle = 'rgb(' + red + ',' + green + ',' + blue + ')';
 		ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
 		x += barWidth;
+	}
+}
+
+function drawVisualiserCircle(bufferLength, x, barWidth, barHeight, dataArray) {
+	// const barWidth = canvas.width / 2 / bufferLength;
+	// draw visualiser on canvas
+	// console.log(x);
+	for (let i = 0; i < bufferLength; i++) {
+		barHeight = dataArray[i];
+		ctx.save();
+		ctx.translate(canvas.width / 2, canvas.height / 2);
+		ctx.rotate((i * Math.PI * 2) / bufferLength);
+		const hue = i * 15;
+
+		ctx.fillStyle = 'hsl(' + hue + ',100%,50%)';
+		ctx.fillRect(0, 0, barWidth, barHeight);
+		x += barWidth;
+		ctx.restore();
 	}
 }
 // end visualisations
