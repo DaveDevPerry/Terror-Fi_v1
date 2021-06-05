@@ -17,7 +17,7 @@
 			width: 5rem;
 			display: grid;
 			place-content: center;
-			background-color: rgb(51, 51, 51);
+			background-color: $bg-grey;
 			.fa-angle-left {
 				font-size: 3rem;
 			}
@@ -33,7 +33,7 @@
 		.media-container {
 			// height: 60%;
 			width: 100%;
-			// background-color: rgb(51, 51, 51);
+			// background-color: $bg-grey;
 			padding: 4rem 2rem;
 			display: grid;
 			place-content: center;
@@ -67,7 +67,7 @@
 	footer {
 		height: 20rem;
 		width: 100%;
-		background-color: rgb(51, 51, 51);
+		background-color: $bg-grey;
 		.player-controls {
 			height: 100%;
 			display: flex;
@@ -88,19 +88,19 @@
 				margin: 0 20px;
 			}
 			#play {
-				background-color: red;
+				background-color: $primary-color;
 				border-radius: 50%;
 				height: 7rem;
 				width: 7rem;
-				color: white;
+				color: $white;
 			}
 			.fa-pause,
 			.fa-play {
-				color: white;
+				color: $white;
 			}
 
 			.action-btn.action-btn-big {
-				color: white;
+				color: $white;
 				font-size: 30px;
 			}
 

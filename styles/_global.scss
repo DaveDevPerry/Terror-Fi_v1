@@ -9,7 +9,7 @@ html {
 	font-size: 62.5%;
 }
 body {
-	background-color: black;
+	background-color: $black;
 	font-size: 1.6rem;
 	font-weight: 400;
 }
@@ -20,7 +20,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-color: rgb(83, 83, 83);
-	// border: 1rem solid red;
+	// border: 1rem solid $primary-color;
 	// border-radius: 5rem;
 	margin: auto;
 	overflow: hidden;
@@ -46,23 +46,23 @@ body {
 		left: 0;
 		z-index: 10;
 		h1 {
-			color: red;
+			color: $primary-color;
 		}
 	}
 }
 h1 {
 	font-family: 'Sedgwick Ave Display', cursive;
-	// color: white;
+	// color: $white;
 }
 h2 {
-	color: white;
+	color: $white;
 	text-transform: capitalize;
 	font-size: 2.6rem;
 	font-weight: 400;
 }
 h3 {
 	text-transform: uppercase;
-	color: red;
+	color: $primary-color;
 	font-weight: 800;
 }
 h5 {
@@ -72,15 +72,19 @@ h5 {
 
 .circle-wrapper {
 	cursor: pointer;
-	background: #575858;
+	background: $circle-bg;
 	// border: 4px solid #464646;
 	border-radius: 50%;
 	box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25),
 		4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .fas {
-	color: grey;
+	color: $txt-grey;
 }
 .shadow {
 	// box-shadow: -4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.progress-time {
+	font-size: 1.2rem;
+	color: $txt-grey;
 }

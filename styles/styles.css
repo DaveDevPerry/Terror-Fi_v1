@@ -52,7 +52,7 @@ body {
 }
 
 .container .section h1 {
-  color: red;
+  color: #d71313;
 }
 
 h1 {
@@ -68,7 +68,7 @@ h2 {
 
 h3 {
   text-transform: uppercase;
-  color: red;
+  color: #d71313;
   font-weight: 800;
 }
 
@@ -79,14 +79,19 @@ h5 {
 
 .circle-wrapper {
   cursor: pointer;
-  background: #575858;
+  background: #3b4045;
   border-radius: 50%;
   -webkit-box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .fas {
-  color: grey;
+  color: #a8a6a6;
+}
+
+.progress-time {
+  font-size: 1.2rem;
+  color: #a8a6a6;
 }
 
 .landing {
@@ -176,7 +181,7 @@ h5 {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  background-color: #333333;
+  background-color: #36383a;
 }
 
 .now-playing header .circle-wrapper .fa-angle-left {
@@ -245,7 +250,7 @@ h5 {
 .now-playing footer {
   height: 20rem;
   width: 100%;
-  background-color: #333333;
+  background-color: #36383a;
 }
 
 .now-playing footer .player-controls {
@@ -271,7 +276,7 @@ h5 {
 }
 
 .now-playing footer .player-controls #play {
-  background-color: red;
+  background-color: #d71313;
   border-radius: 50%;
   height: 7rem;
   width: 7rem;
@@ -290,6 +295,45 @@ h5 {
 
 .now-playing footer .player-controls .action-btn:focus {
   outline: 0;
+}
+
+.progress-container {
+  height: 4rem;
+  width: 100%;
+  border-top: 0.4rem solid #494a49;
+  border-bottom: 0.4rem solid #494a49;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.progress-container .progress-wrapper {
+  background-color: #36383a;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 1rem;
+  height: 1rem;
+  width: 100%;
+}
+
+.progress-container .progress-wrapper .progress {
+  background-color: #d71313;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
 }
 
 .section-active {
