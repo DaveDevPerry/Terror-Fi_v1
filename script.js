@@ -1,16 +1,8 @@
-// visualisations
-// let audio1 = new Audio(
-
-// );
-// audio1.src = 'spell.wav';
-// const audioCtx = new AudioContext();
-// console.log(audioCtx);
-
 const container = document.querySelector('#container');
 const canvas = document.querySelector('#canvas1');
 canvas.width = window.innerWidth;
-// canvas.height = '100px';
 canvas.height = window.innerHeight;
+const file = document.querySelector('#file-upload');
 const ctx = canvas.getContext('2d');
 let audioSource;
 let analyser;
@@ -25,10 +17,38 @@ container.addEventListener('click', function () {
 	analyser = audioContext.createAnalyser();
 	audioSource.connect(analyser);
 	analyser.connect(audioContext.destination);
-	analyser.fftSize = 64;
+	analyser.fftSize = 32;
 	const bufferLength = analyser.frequencyBinCount;
 	const dataArray = new Uint8Array(bufferLength);
+	const barWidth = canvas.width / bufferLength;
+	let barHeight;
+	let x;
 
+	function animate() {
+		x = 0;
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		analyser.getByteFrequencyData(dataArray);
+		drawVisualiser(bufferLength, x, barWidth, barHeight, dataArray);
+		requestAnimationFrame(animate);
+	}
+	animate();
+});
+
+file.addEventListener('change', function () {
+	// console.log(this.files);
+	const files = this.files;
+	const audio1 = document.querySelector('#audio1');
+	// this is where to randomise tracks
+	audio1.src = URL.createObjectURL(files[0]);
+	audio1.load();
+	audio1.play();
+	audioSource = audioContext.createMediaElementSource(audio1);
+	analyser = audioContext.createAnalyser();
+	audioSource.connect(analyser);
+	analyser.connect(audioContext.destination);
+	analyser.fftSize = 32;
+	const bufferLength = analyser.frequencyBinCount;
+	const dataArray = new Uint8Array(bufferLength);
 	// bar visualiser
 	const barWidth = canvas.width / bufferLength;
 	let barHeight;
@@ -38,17 +58,19 @@ container.addEventListener('click', function () {
 		x = 0;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		analyser.getByteFrequencyData(dataArray);
-		// draw visualiser on canvas
-		for (let i = 0; i < bufferLength; i++) {
-			barHeight = dataArray[i];
-			ctx.fillStyle = 'red';
-			ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-			x += barWidth;
-		}
-		// end draw
+		drawVisualiser(bufferLength, x, barWidth, barHeight, dataArray);
 		requestAnimationFrame(animate);
 	}
 	animate();
 });
 
+function drawVisualiser(bufferLength, x, barWidth, barHeight, dataArray) {
+	// draw visualiser on canvas
+	for (let i = 0; i < bufferLength; i++) {
+		barHeight = dataArray[i] * 2;
+		ctx.fillStyle = '#D71313';
+		ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+		x += barWidth;
+	}
+}
 // end visualisations
