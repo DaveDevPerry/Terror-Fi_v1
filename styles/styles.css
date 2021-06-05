@@ -89,11 +89,6 @@ h5 {
   color: grey;
 }
 
-.shadow {
-  -webkit-box-shadow: -4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: -4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .landing {
   height: 100%;
   width: 100%;
@@ -212,7 +207,6 @@ h5 {
 
 .now-playing .content-wrapper .media-container {
   width: 100%;
-  background-color: #333333;
   padding: 4rem 2rem;
   display: -ms-grid;
   display: grid;
@@ -281,6 +275,12 @@ h5 {
   border-radius: 50%;
   height: 7rem;
   width: 7rem;
+  color: white;
+}
+
+.now-playing footer .player-controls .fa-pause,
+.now-playing footer .player-controls .fa-play {
+  color: white;
 }
 
 .now-playing footer .player-controls .action-btn.action-btn-big {

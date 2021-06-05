@@ -33,7 +33,7 @@
 		.media-container {
 			// height: 60%;
 			width: 100%;
-			background-color: rgb(51, 51, 51);
+			// background-color: rgb(51, 51, 51);
 			padding: 4rem 2rem;
 			display: grid;
 			place-content: center;
@@ -92,6 +92,11 @@
 				border-radius: 50%;
 				height: 7rem;
 				width: 7rem;
+				color: white;
+			}
+			.fa-pause,
+			.fa-play {
+				color: white;
 			}
 
 			.action-btn.action-btn-big {
