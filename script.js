@@ -20,7 +20,8 @@ container.addEventListener('click', function () {
 	analyser.fftSize = 32;
 	const bufferLength = analyser.frequencyBinCount;
 	const dataArray = new Uint8Array(bufferLength);
-	const barWidth = canvas.width / bufferLength;
+	// change dep on visualiser req
+	const barWidth = canvas.width / 2 / bufferLength;
 	let barHeight;
 	let x;
 
@@ -28,7 +29,7 @@ container.addEventListener('click', function () {
 		x = 0;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		analyser.getByteFrequencyData(dataArray);
-		drawVisualiser(bufferLength, x, barWidth, barHeight, dataArray);
+		drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
 		requestAnimationFrame(animate);
 	}
 	animate();
@@ -50,7 +51,7 @@ file.addEventListener('change', function () {
 	const bufferLength = analyser.frequencyBinCount;
 	const dataArray = new Uint8Array(bufferLength);
 	// bar visualiser
-	const barWidth = canvas.width / bufferLength;
+	const barWidth = canvas.width / 2 / bufferLength;
 	let barHeight;
 	let x;
 
@@ -58,17 +59,46 @@ file.addEventListener('change', function () {
 		x = 0;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		analyser.getByteFrequencyData(dataArray);
-		drawVisualiser(bufferLength, x, barWidth, barHeight, dataArray);
+		drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
 		requestAnimationFrame(animate);
 	}
 	animate();
 });
-
-function drawVisualiser(bufferLength, x, barWidth, barHeight, dataArray) {
+function drawVisualiser1(bufferLength, x, barWidth, barHeight, dataArray) {
 	// draw visualiser on canvas
 	for (let i = 0; i < bufferLength; i++) {
 		barHeight = dataArray[i] * 2;
-		ctx.fillStyle = '#D71313';
+		const red = (i * barHeight) / 20;
+		const green = i * 2;
+		const blue = 0;
+		ctx.fillStyle = 'rgb(' + red + ',' + green + ',' + blue + ')';
+		ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+		x += barWidth;
+	}
+}
+function drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray) {
+	// const barWidth = canvas.width / 2 / bufferLength;
+	// draw visualiser on canvas
+	for (let i = 0; i < bufferLength; i++) {
+		barHeight = dataArray[i] * 2;
+		const red = (i * barHeight) / 20;
+		const green = i * 2;
+		const blue = 0;
+		ctx.fillStyle = 'rgb(' + red + ',' + green + ',' + blue + ')';
+		ctx.fillRect(
+			canvas.width / 2 - x,
+			canvas.height - barHeight,
+			barWidth,
+			barHeight
+		);
+		x += barWidth;
+	}
+	for (let i = 0; i < bufferLength; i++) {
+		barHeight = dataArray[i] * 2;
+		const red = (i * barHeight) / 20;
+		const green = i * 2;
+		const blue = 0;
+		ctx.fillStyle = 'rgb(' + red + ',' + green + ',' + blue + ')';
 		ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
 		x += barWidth;
 	}
