@@ -1,19 +1,8 @@
+import { startVisualiser } from './modules/visualisers.mjs';
+
 const startBtn = document.querySelector('.circle-wrapper');
 const backBtn = document.querySelector('#t-back-btn');
-
 const sections = document.querySelectorAll('.section');
-
-startBtn.addEventListener('click', () => {
-	// display now playing section
-	document.querySelector('.landing').classList.remove('section-active');
-	document.querySelector('.now-playing').classList.add('section-active');
-	playMusic();
-});
-backBtn.addEventListener('click', () => {
-	// show landing page
-	document.querySelector('.now-playing').classList.remove('section-active');
-	document.querySelector('.landing').classList.add('section-active');
-});
 
 const musicContainer = document.getElementById('music-container');
 const recordContainer = document.querySelector('.record');
@@ -40,13 +29,52 @@ const songs = [
 	'09 Rock Radio',
 	'14 When I Die',
 ];
-
 // Keep track of song
 let songIndex = 3;
-
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
 
+// EVENT LISTENERS
+startBtn.addEventListener('click', () => {
+	// display now playing section
+	document.querySelector('.landing').classList.remove('section-active');
+	document.querySelector('.now-playing').classList.add('section-active');
+	playMusic();
+});
+backBtn.addEventListener('click', () => {
+	// show landing page
+	document.querySelector('.now-playing').classList.remove('section-active');
+	document.querySelector('.landing').classList.add('section-active');
+});
+// Event listeners
+playBtn.addEventListener('click', playMusic);
+// Change song
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
+// Song ends
+audio.addEventListener('ended', nextSong);
+audio.addEventListener('timeupdate', getSongDuration);
+audio.addEventListener('timeupdate', getCurrentTime);
+audio.addEventListener('timeupdate', updateProgressBar);
+
+function playMusic() {
+	const isPlaying = recordContainer.classList.contains('play');
+	if (isPlaying) {
+		pauseSong();
+	} else {
+		playSong();
+	}
+}
+// Play song
+function playSong() {
+	recordContainer.classList.add('play');
+	playBtn.querySelector('i.fas').classList.remove('fa-play');
+	playBtn.querySelector('i.fas').classList.add('fa-pause');
+	audio.play();
+	// start visualiser?
+	console.log(audio);
+	startVisualiser(audio);
+}
 // Update song details
 function loadSong(song) {
 	const songTitle = song.replace(/\d+/g, '');
@@ -54,51 +82,31 @@ function loadSong(song) {
 	audio.src = `./music/${song}.mp3`;
 	cover.src = `./images/${song}.jpg`;
 }
-
-// Play song
-function playSong() {
-	recordContainer.classList.add('play');
-	playBtn.querySelector('i.fas').classList.remove('fa-play');
-	playBtn.querySelector('i.fas').classList.add('fa-pause');
-
-	audio.play();
-}
-
 // Pause song
 function pauseSong() {
 	recordContainer.classList.remove('play');
 	playBtn.querySelector('i.fas').classList.add('fa-play');
 	playBtn.querySelector('i.fas').classList.remove('fa-pause');
-
 	audio.pause();
 }
-
 // Previous song
 function prevSong() {
 	songIndex--;
-
 	if (songIndex < 0) {
 		songIndex = songs.length - 1;
 	}
-
 	loadSong(songs[songIndex]);
-
 	playSong();
 }
-
 // Next song
 function nextSong() {
 	songIndex++;
-
 	if (songIndex > songs.length - 1) {
 		songIndex = 0;
 	}
-
 	loadSong(songs[songIndex]);
-
 	playSong();
 }
-
 //get song duration
 function getSongDuration(e) {
 	console.log(e.srcElement.duration);
@@ -110,7 +118,6 @@ function getSongDuration(e) {
 	mins < 10 ? (mins = mins.padStart(2, '0')) : mins;
 	console.log(mins);
 	songTime.innerHTML = `${mins}:${secs}`;
-
 	// mins || secs === NaN
 	// 	? (songTime.innerHTML = '')
 	// 	: (songTime.innerHTML = `${mins}:${secs}`);
@@ -118,7 +125,6 @@ function getSongDuration(e) {
 	// 	? (songTime.innerHTML = `${mins}:${secs}`)
 	// 	: (songTime.innerHTML = '');
 }
-
 //get current time
 function getCurrentTime(e) {
 	const durInSecs = Math.round(e.srcElement.currentTime);
@@ -129,16 +135,11 @@ function getCurrentTime(e) {
 	mins < 10 ? (mins = mins.padStart(2, '0')) : mins;
 	curTime.innerHTML = `${mins}:${secs}`;
 }
-
 // update progress bar
 function updateProgressBar(e) {
 	const { currentTime, duration } = e.srcElement;
 	let percentPlayed = Math.round((currentTime / duration) * 100);
 	console.log(percentPlayed);
-	// let test = (currentTime / duration) * 100;
-	// let testA = test.toFixed(1);
-	// console.log(test, testA);
-	// progressBar.style.width = `${testA}px`;
 	progressBar.style.width = `${percentPlayed}%`;
 }
 
@@ -204,9 +205,6 @@ function updateProgressBar(e) {
 
 // Time of song
 // audio.addEventListener('timeupdate', DurTime);
-audio.addEventListener('timeupdate', getSongDuration);
-audio.addEventListener('timeupdate', getCurrentTime);
-audio.addEventListener('timeupdate', updateProgressBar);
 
 // Update progress bar
 // function updateProgress(e) {
@@ -280,39 +278,11 @@ audio.addEventListener('timeupdate', updateProgressBar);
 // 	durTime.innerHTML = min_d + ':' + sec_d;
 // }
 
-// Event listeners
-playBtn.addEventListener('click', () => {
-	// const isPlaying = recordContainer.classList.contains('play');
-
-	// if (isPlaying) {
-	// 	pauseSong();
-	// } else {
-	// 	playSong();
-	// }
-	playMusic();
-});
-function playMusic() {
-	const isPlaying = recordContainer.classList.contains('play');
-
-	if (isPlaying) {
-		pauseSong();
-	} else {
-		playSong();
-	}
-}
-
-// Change song
-prevBtn.addEventListener('click', prevSong);
-nextBtn.addEventListener('click', nextSong);
-
 // Time/song update
 // audio.addEventListener('timeupdate', updateProgress);
 
 // Click on progress bar
 // progressContainer.addEventListener('click', setProgress);
-
-// Song ends
-audio.addEventListener('ended', nextSong);
 
 // Time of song
 // audio.addEventListener('timeupdate', DurTime);

@@ -29,12 +29,15 @@ container.addEventListener('click', function () {
 		x = 0;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		analyser.getByteFrequencyData(dataArray);
-		// drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
-		drawVisualiserCircle(bufferLength, x, barWidth, barHeight, dataArray);
+		drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
+		// drawVisualiserCircle(bufferLength, x, barWidth, barHeight, dataArray);
 		requestAnimationFrame(animate);
 	}
 	animate();
 });
+
+// my function that starts vis from playSong func
+// function startVisualiser(audio){}
 
 file.addEventListener('change', function () {
 	// console.log(this.files);
@@ -60,12 +63,13 @@ file.addEventListener('change', function () {
 		x = 0;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		analyser.getByteFrequencyData(dataArray);
-		// drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
-		drawVisualiserCircle(bufferLength, x, barWidth, barHeight, dataArray);
+		drawVisualiser2(bufferLength, x, barWidth, barHeight, dataArray);
+		// drawVisualiserCircle(bufferLength, x, barWidth, barHeight, dataArray);
 		requestAnimationFrame(animate);
 	}
 	animate();
 });
+
 function drawVisualiser1(bufferLength, x, barWidth, barHeight, dataArray) {
 	// draw visualiser on canvas
 	for (let i = 0; i < bufferLength; i++) {
