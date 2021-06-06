@@ -19,76 +19,71 @@
 
 
 
-    <div class="container">
-      <div class="background"></div>
+<div class="container">
 
-      <section class="loader">
+  <div class="background"></div>
 
-      </section>
+  <section class="loader"></section>
 
+  <section class="landing section section-active">
+    <div class="circle-wrapper">
+      <i class="fas fa-play"></i>
+    </div>
+    <h1 id="brand">Terror-Fi</h1>
+  </section>
 
-      <section class="landing section section-active">
-        <div class="circle-wrapper">
-          <i class="fas fa-play"></i>
+  <section class="now-playing  section ">
+
+    <header>
+      <div class="circle-wrapper" id="t-back-btn">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <h5 class="page-heading">Now Playing</h5>
+      <div class="circle-wrapper" id="menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+
+      <div class="media-container shadow">
+        <div class="circle-wrapper record">
+          <img src="./images/04 Discotheque Wreck.jpg" alt="music-cover" id="cover" />
         </div>
-<h1 id="brand">Terror-Fi</h1>
-      </section>
+      </div>
 
+      <div class="progress-container">
+        <div class="progress-time" id="current-time">00:00</div>
+        <div class="progress-wrapper" id="progress-wrapper">
+          <div class="progress" id="progress"></div>
+        </div>
+        <div class="progress-time" id="song-time">03:11</div>
+      </div>
 
-<section class="now-playing  section ">
+      <!-- <div class="song-details">
+        <div class="music-info">
+          <h2 class="song-title" id="title"></h2>
+          <h3 class="artist">Terrorvision</h3>
+        </div>
+      </div> -->
 
-  <header>
-    <div class="circle-wrapper" id="t-back-btn">
-      <i class="fas fa-angle-left"></i>
+      <div class="visualyser-container">
+        <div id="container">
+          <canvas id="canvas1"></canvas>
+        </div>
+      </div>
+
     </div>
-    <h5 class="page-heading">Now Playing</h5>
-    <div class="circle-wrapper" id="menu">
-      <i class="fas fa-bars"></i>
-    </div>
-  </header>
-<div class="content-wrapper">
 
-  <div class="media-container shadow">
-    <div class="circle-wrapper record">
-      
-        <img src="./images/04 Discotheque Wreck.jpg" alt="music-cover" id="cover" />
-      
-      
-    </div>
-  </div>
-
-
-<div class="progress-container">
-  <div class="progress-time" id="current-time">00:00</div>
-  <div class="progress-wrapper" id="progress-wrapper">
-    <div class="progress" id="progress"></div>
-  </div>
-  <div class="progress-time" id="song-time">03:11</div>
-</div>
-
-<div class="song-details">
-  <div class="music-info">
-    <h2 class="song-title" id="title"></h2>
-    <h3 class="artist">Terrorvision</h3>
-  </div>
-</div>
-
-
-<div class="visualyser-container">
-  <div id="container">
-    <canvas id="canvas1"></canvas>
-    <!-- <audio id="audio1"></audio> -->
-    <!-- <audio id="audio1" controls></audio> -->
-    <!-- <input type="file" id="file-upload" accept="'audio/*" /> -->
-  </div>
- 
-</div>
-
-  
-  
-
-</div>
   <footer>
+
+    <div class="song-details">
+      <div class="music-info">
+        <h2 class="song-title" id="title"></h2>
+        <h3 class="artist">Terrorvision</h3>
+      </div>
+    </div>
+
     <div class="player-controls">
       <button id="prev" class="action-btn">
         <i class="fas fa-backward"></i>
@@ -99,10 +94,13 @@
       <button id="next" class="action-btn">
         <i class="fas fa-forward"></i>
       </button>
-
     </div>
+    
   </footer>
+
 </section>
+
+
 <div class="music-container" id="music-container">
   <audio src="./music/04 Discotheque Wreck.mp3" id="audio"></audio>
 </div>

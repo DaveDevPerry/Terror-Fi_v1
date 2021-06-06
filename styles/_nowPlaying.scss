@@ -2,10 +2,10 @@
 	height: 100%;
 	width: 100%;
 
-	@include flex(flex-end, center, column);
+	@include flex(space-between, center, column);
 	display: none;
 	header {
-		height: 15rem;
+		height: 8rem;
 		width: 100%;
 		@include flex(space-between, center, row);
 		padding: 0 2rem;
@@ -27,25 +27,27 @@
 		}
 	}
 	.content-wrapper {
-		height: 100%;
+		height: calc(100vh - (24rem));
 		width: 100%;
-		@include flex(center, center, column);
+		@include flex(space-between, center, column);
+		// background-color: white;
 		.media-container {
-			// height: 60%;
+			height: 100%;
 			width: 100%;
 			// background-color: $bg-grey;
-			padding: 4rem 2rem;
+			padding: 1rem 2rem;
 			display: grid;
-			// display: none;
+			// // display: none;
 			place-content: center;
+			// @include flex(space-between, center, column);
 			.circle-wrapper.record {
-				height: 24rem;
-				width: 24rem;
+				height: 20rem;
+				width: 20rem;
 				display: grid;
 				place-content: center;
 				#cover {
-					height: 24rem;
-					width: 24rem;
+					height: 20rem;
+					width: 20rem;
 					border-radius: 50%;
 					animation: rotate 10s linear infinite;
 
@@ -58,10 +60,17 @@
 		}
 		.progress-container {
 			height: 4rem;
+			margin: 2rem 0;
 		}
 		.visualyser-container {
 			height: 12rem;
 		}
+	}
+
+	footer {
+		height: 16rem;
+		width: 100%;
+		background-color: $bg-grey;
 		.song-details {
 			// height: 100%;
 			// height: 40%;
@@ -69,14 +78,8 @@
 			padding: 1rem 2rem;
 			text-align: center;
 		}
-	}
-
-	footer {
-		height: 20rem;
-		width: 100%;
-		background-color: $bg-grey;
 		.player-controls {
-			height: 100%;
+			// height: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;

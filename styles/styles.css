@@ -62,13 +62,14 @@ h1 {
 h2 {
   color: white;
   text-transform: capitalize;
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
 h3 {
   text-transform: uppercase;
   color: #d71313;
+  font-size: 1.4rem;
   font-weight: 800;
 }
 
@@ -143,9 +144,9 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -157,7 +158,7 @@ h5 {
 }
 
 .now-playing header {
-  height: 15rem;
+  height: 8rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,14 +194,14 @@ h5 {
 }
 
 .now-playing .content-wrapper {
-  height: 100%;
+  height: calc(100vh - (24rem));
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -211,24 +212,25 @@ h5 {
 }
 
 .now-playing .content-wrapper .media-container {
+  height: 100%;
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
   display: -ms-grid;
   display: grid;
   place-content: center;
 }
 
 .now-playing .content-wrapper .media-container .circle-wrapper.record {
-  height: 24rem;
-  width: 24rem;
+  height: 20rem;
+  width: 20rem;
   display: -ms-grid;
   display: grid;
   place-content: center;
 }
 
 .now-playing .content-wrapper .media-container .circle-wrapper.record #cover {
-  height: 24rem;
-  width: 24rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 50%;
   -webkit-animation: rotate 10s linear infinite;
           animation: rotate 10s linear infinite;
@@ -243,26 +245,26 @@ h5 {
 
 .now-playing .content-wrapper .progress-container {
   height: 4rem;
+  margin: 2rem 0;
 }
 
 .now-playing .content-wrapper .visualyser-container {
   height: 12rem;
 }
 
-.now-playing .content-wrapper .song-details {
+.now-playing footer {
+  height: 16rem;
+  width: 100%;
+  background-color: #36383a;
+}
+
+.now-playing footer .song-details {
   width: 100%;
   padding: 1rem 2rem;
   text-align: center;
 }
 
-.now-playing footer {
-  height: 20rem;
-  width: 100%;
-  background-color: #36383a;
-}
-
 .now-playing footer .player-controls {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,6 +348,7 @@ h5 {
 .visualyser-container {
   position: relative;
   width: 100%;
+  height: 12rem;
 }
 
 .visualyser-container #container {
@@ -361,7 +364,7 @@ h5 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 12rem;
 }
 
 .visualyser-container #container #audio1 {
