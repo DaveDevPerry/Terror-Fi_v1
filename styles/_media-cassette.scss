@@ -1,0 +1,16 @@
+.content-wrapper {
+	.media-container.media-cassette {
+		display: none;
+	}
+	.media-container.media-cassette.media-active {
+		// height: 100%;
+		// width: 100%;
+		background-color: yellow;
+		// padding: 4rem 0 4rem 2rem;
+		display: grid;
+		// display: none;
+		place-content: center;
+		// position: relative;
+		// @include flex(space-between, center, column);
+	}
+}

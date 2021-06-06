@@ -265,67 +265,10 @@ h5 {
           flex-direction: column;
 }
 
-.now-playing .content-wrapper .media-container.media-turntable {
+.now-playing .content-wrapper .media-container {
+  height: 25rem;
   width: 100%;
-  padding: 1rem 2rem;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  display: none;
-}
-
-.now-playing .content-wrapper .media-container.media-turntable .circle-wrapper.vinyl {
-  height: 20rem;
-  width: 20rem;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-}
-
-.now-playing .content-wrapper .media-container.media-turntable .circle-wrapper.vinyl #vinyl {
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
-  -webkit-animation: rotate 10s linear infinite;
-          animation: rotate 10s linear infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
-.now-playing .content-wrapper .media-container.media-turntable .circle-wrapper.vinyl.play #vinyl {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-
-.now-playing .content-wrapper .media-container.media-cd {
-  width: 100%;
-  padding: 1rem 2rem;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-}
-
-.now-playing .content-wrapper .media-container.media-cd .circle-wrapper.record {
-  height: 20rem;
-  width: 20rem;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-}
-
-.now-playing .content-wrapper .media-container.media-cd .circle-wrapper.record #cover {
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
-  -webkit-animation: rotate 10s linear infinite;
-          animation: rotate 10s linear infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
-.now-playing .content-wrapper .media-container.media-cd .circle-wrapper.record.play #cover {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  background-color: lawngreen;
 }
 
 .now-playing .content-wrapper .progress-container {
@@ -390,6 +333,62 @@ h5 {
 
 .now-playing footer .player-controls .action-btn:focus {
   outline: 0;
+}
+
+.content-wrapper .media-container.media-turntable {
+  display: none;
+}
+
+.content-wrapper .media-container.media-turntable.media-active {
+  background-color: blue;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.content-wrapper .media-container.media-cd {
+  display: none;
+}
+
+.content-wrapper .media-container.media-cd.media-active {
+  background-color: red;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.content-wrapper .media-container.media-cd.media-active .circle-wrapper.record {
+  height: 20rem;
+  width: 20rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.content-wrapper .media-container.media-cd.media-active .circle-wrapper.record #cover {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.content-wrapper .media-container.media-cd.media-active .circle-wrapper.record.play #cover {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.content-wrapper .media-container.media-cassette {
+  display: none;
+}
+
+.content-wrapper .media-container.media-cassette.media-active {
+  background-color: yellow;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 .progress-container {

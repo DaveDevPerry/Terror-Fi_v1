@@ -1,0 +1,99 @@
+.content-wrapper {
+	.media-container.media-turntable {
+		display: none;
+	}
+	.media-container.media-turntable.media-active {
+		// height: 100%;
+		// width: 100%;
+		background-color: blue;
+		// padding: 4rem 0 4rem 2rem;
+		display: grid;
+		// display: none;
+		place-content: center;
+		// position: relative;
+		// @include flex(space-between, center, column);
+		// .record-player {
+		// 	background-color: $bg-grey;
+		// 	width: 100%;
+		// 	// width: 40%;
+		// 	// width: calc(50vw + 10rem);
+		// 	height: 22rem;
+		// 	border-radius: 1rem 0 0 1rem;
+		// 	padding: 1rem;
+		// 	// right: 0;
+		// 	// @include flex(flex-start, center, row);
+		// 	position: relative;
+		// 	.circle-wrapper.vinyl {
+		// 		position: absolute;
+		// 		height: 20rem;
+		// 		width: 20rem;
+		// 		top: 50%;
+		// 		left: 50%;
+		// 		transform: translate(-11rem, -50%);
+		// 		#cover1 {
+		// 			// position: absolute;
+		// 			height: 20rem;
+		// 			width: 20rem;
+		// 			top: 50%;
+		// 			left: 50%;
+		// 			transform: translate(-50%, -50%);
+		// 			border-radius: 50%;
+		// 			animation: rotate 10s linear infinite;
+		// 			animation-play-state: paused;
+		// 			// position: relative;
+		// 		}
+		// 		#cover {
+		// 			z-index: 60;
+		// 			position: absolute;
+		// 			height: 6rem;
+		// 			width: 6rem;
+		// 			top: 7rem;
+		// 			left: 7.2rem;
+		// 			// transform: translate(-50%, -50%);
+		// 			border-radius: 50%;
+		// 			animation: rotate 10s linear infinite;
+		// 			animation-play-state: paused;
+		// 			// position: relative;
+		// 		}
+		// 		// .vinyl-label {
+		// 		// 	position: absolute;
+		// 		// 	height: 5rem;
+		// 		// 	width: 5rem;
+		// 		// 	top: 10rem;
+		// 		// 	left: 10rem;
+		// 		// 	transform: translate(-50%, -50%);
+		// 		// 	z-index: 1;
+		// 		// 	border-radius: 50%;
+		// 		// }
+		// 		// #cover {
+		// 		// 	// position: absolute;
+
+		// 		// 	animation: rotate 10s linear infinite;
+		// 		// 	animation-play-state: paused;
+		// 		// }
+		// 	}
+		// 	.circle-wrapper.vinyl.play #vinyl-record {
+		// 		animation-play-state: running;
+		// 	}
+		// 	.record-player-arm {
+		// 		position: absolute;
+		// 		top: 60%;
+		// 		left: 50%;
+		// 		transform: translate(-50%, -50%);
+		// 		left: calc(50vw + 10rem);
+		// 		height: 20rem;
+		// 		overflow: visible;
+		// 		// position: relative;
+		// 		z-index: 50;
+		// 		#player-arm {
+		// 			// position: absolute;
+		// 			// top: 50%;
+		// 			// left: -2rem;
+		// 			// transform: translate(0, -50%);
+		// 			height: 80%;
+		// 			// z-index: 20;
+		// 		}
+		// 	}
+		// }
+	}
+}

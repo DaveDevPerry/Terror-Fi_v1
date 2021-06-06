@@ -6,6 +6,13 @@ const backBtn = document.querySelector('#t-back-btn');
 const sections = document.querySelectorAll('.section');
 const mediaMenu = document.querySelector('#menu');
 let menuStatus = false;
+const mediaDislpays = document.querySelectorAll('.media-container');
+// mediaDislpays.forEach((display) => {
+// 	display.addEventListener('click', () => {
+// 		console.log(this);
+// 	});
+// });
+
 const turnTableBtn = document.querySelector('#display-record');
 const discBtn = document.querySelector('#dislpay-cd');
 const cassetteBtn = document.querySelector('#display-cassette');
