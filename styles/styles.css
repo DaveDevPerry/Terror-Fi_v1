@@ -74,7 +74,7 @@ h3 {
 }
 
 h5 {
-  color: #cecbcb;
+  color: #a8a6a6;
   font-size: 1.6rem;
 }
 
@@ -212,7 +212,6 @@ h5 {
 }
 
 .now-playing .content-wrapper .media-container {
-  height: 100%;
   width: 100%;
   padding: 1rem 2rem;
   display: -ms-grid;
@@ -245,7 +244,7 @@ h5 {
 
 .now-playing .content-wrapper .progress-container {
   height: 4rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .now-playing .content-wrapper .visualyser-container {
