@@ -1,6 +1,7 @@
 import { startVisualiser } from './modules/visualisers.mjs';
 import { toggleMediaMenu } from './modules/animations.mjs';
 import { displayMedia } from './modules/toggleFunctions.mjs';
+import { loader } from './modules/loader.mjs';
 const startBtn = document.querySelector('.circle-wrapper');
 const backBtn = document.querySelector('#t-back-btn');
 const sections = document.querySelectorAll('.section');
@@ -47,6 +48,9 @@ const songs = [
 ];
 // Keep track of song
 let songIndex = 3;
+
+window.addEventListener('load', loader);
+
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
 

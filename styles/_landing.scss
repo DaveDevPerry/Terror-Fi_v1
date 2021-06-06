@@ -10,6 +10,7 @@
 		width: 13rem;
 		position: relative;
 		cursor: pointer;
+
 		.fa-play {
 			position: absolute;
 			top: 50%;
@@ -18,6 +19,9 @@
 			color: rgb(190, 190, 190);
 			font-size: 6rem;
 		}
+	}
+	.circle-wrapper#lets-rock {
+		border: 0.5rem solid $primary-color;
 	}
 	#brand {
 		margin: 10rem auto;

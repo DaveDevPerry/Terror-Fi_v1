@@ -21,7 +21,8 @@
 			width: 5rem;
 			display: grid;
 			place-content: center;
-			background-color: $bg-grey;
+			background-color: $circle-bg;
+			border: 0.3rem solid $circle-border;
 			.fa-angle-left {
 				font-size: 3rem;
 			}
@@ -173,7 +174,7 @@
 	footer {
 		height: 16rem;
 		width: 100%;
-		background-color: $bg-grey;
+		background-color: $circle-bg;
 		border-top: 0.4rem solid $primary-color;
 		.song-details {
 			// height: 100%;
@@ -213,6 +214,7 @@
 					#d71313 48.84%,
 					rgba(169, 8, 8, 0) 59.03%
 				);
+				border: 0.4rem solid $circle-border;
 			}
 			.fa-pause,
 			.fa-play {

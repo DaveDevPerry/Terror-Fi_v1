@@ -1,0 +1,132 @@
+.container {
+	.loader {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: $bg-grey;
+		display: grid;
+		place-content: center;
+		z-index: 500;
+		.loader-wrapper {
+			height: 20rem;
+			width: 15rem;
+			@include flex(center, center, column);
+			// border: 1px solid black;
+			.rock-on {
+				font-size: 3rem;
+				color: $primary-color;
+				margin-bottom: 2rem;
+				animation: letsRock 10s linear forwards;
+			}
+			.vol-level {
+				// border: 1px solid black;
+				height: 5rem;
+				overflow: hidden;
+				margin: 1rem 0;
+
+				#loader-list {
+					width: 60%;
+					margin: auto;
+					animation: numbers 10s linear forwards;
+					.loader-nums {
+						// background-color: blue;
+						color: $txt-grey;
+						font-size: 5rem;
+						height: 7.4rem;
+						@include flex(center, center, row);
+					}
+				}
+			}
+			.vol-dial {
+				@include flex(space-between, center, row);
+				height: 8rem;
+				.vol-num {
+					width: 2rem;
+					// border: 1px solid black;
+					place-self: flex-end;
+					padding-bottom: 0.5rem;
+					text-align: right;
+					&:last-child {
+						text-align: left;
+					}
+				}
+				.dial-wrapper {
+					// position: relative;
+					// overflow: hidden;
+					.dial {
+						position: relative;
+						// position: absolute;
+						// top: 50%;
+						// left: 50%;
+						// transform: translate(-50%, -50%);
+						background-color: $black;
+						height: 6rem;
+						width: 6rem;
+						border-radius: 50%;
+						animation: turnItUp 10s linear forwards;
+						// animation-delay: 0.5s;
+						div {
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							height: 5rem;
+							width: 5rem;
+							border-radius: 50%;
+							background-color: rgb(139, 139, 137);
+						}
+						&::before {
+							position: absolute;
+							content: '';
+							height: 1rem;
+							width: 2rem;
+							bottom: 1rem;
+							left: 0;
+							// transform: skew(200px);
+							background-color: black;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@keyframes turnItUp {
+		0% {
+			transform: rotate(0deg);
+		}
+		50%,
+		80% {
+			transform: rotate(245deg);
+		}
+		99%,
+		100% {
+			transform: rotate(300deg);
+		}
+	}
+	@keyframes numbers {
+		0% {
+			transform: translateY(0);
+		}
+		50%,
+		80% {
+			transform: translateY(-85%);
+		}
+		99%,
+		100% {
+			transform: translateY(-94%);
+		}
+	}
+	@keyframes letsRock {
+		0%,
+		99% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
