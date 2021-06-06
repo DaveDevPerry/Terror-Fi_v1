@@ -450,7 +450,6 @@ header .media-menu #media-menu li {
 }
 
 .content-wrapper .media-container.media-cassette.media-active {
-  background-color: yellow;
   display: -ms-grid;
   display: grid;
   place-content: center;
