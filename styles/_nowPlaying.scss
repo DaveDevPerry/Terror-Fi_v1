@@ -206,6 +206,12 @@
 				height: 7rem;
 				width: 7rem;
 				color: $white;
+				background: radial-gradient(
+					91.67% 91.67% at 50% 50%,
+					#a90808 0%,
+					#d71313 48.84%,
+					rgba(169, 8, 8, 0) 59.03%
+				);
 			}
 			.fa-pause,
 			.fa-play {

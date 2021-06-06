@@ -6,11 +6,13 @@
 	border-bottom: 0.4rem solid $line-border;
 	padding: 0.5rem 2rem;
 	@include flex(space-between, center, row);
+	// box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25),
+	// 	4px 4px 4px rgba(0, 0, 0, 0.55);
 	.progress-wrapper {
 		background-color: $bg-grey;
 		border-radius: 0.5rem;
 		cursor: pointer;
-		margin: 1rem;
+		margin: 1rem 2rem;
 		height: 1rem;
 		width: 100%;
 		.progress {

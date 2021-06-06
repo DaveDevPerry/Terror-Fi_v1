@@ -272,6 +272,7 @@ h5 {
   height: 7rem;
   width: 7rem;
   color: white;
+  background: radial-gradient(91.67% 91.67% at 50% 50%, #a90808 0%, #d71313 48.84%, rgba(169, 8, 8, 0) 59.03%);
 }
 
 .now-playing footer .player-controls .fa-pause,
@@ -338,6 +339,8 @@ header .media-menu #media-menu li {
   height: 20rem;
   border-radius: 2rem;
   margin: 2rem 0;
+  -webkit-box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.55);
+          box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.55);
 }
 
 .content-wrapper .media-container.media-turntable {
@@ -477,7 +480,7 @@ header .media-menu #media-menu li {
   background-color: #36383a;
   border-radius: 0.5rem;
   cursor: pointer;
-  margin: 1rem;
+  margin: 1rem 2rem;
   height: 1rem;
   width: 100%;
 }
