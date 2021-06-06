@@ -14,7 +14,7 @@ return menuStatus = false;
 function showMenu(){
   const menu = document.querySelector('.media-menu');
   const tl = new TimelineMax();
- tl.to(menu,1,{scaleX:1,transformOrigin: 'right center'})
+ tl.to(menu,1,{y:'7rem'})
 // tl.from(menu,0.5,{scaleX: 0, transformOrigin: 'right center'})
 // tl.set(menu,{scaleX:0, transformOrigin: 'right center'})
 return tl;
@@ -22,8 +22,24 @@ return tl;
 function hideMenu(){
   const menu = document.querySelector('.media-menu');
   const tl = new TimelineMax();
- tl.to(menu,1,{scaleX:0,transformOrigin: 'right center'})
+ tl.to(menu,1,{y:'-7rem'})
 // tl.from(menu,0.5,{scaleX: 0, transformOrigin: 'right center'})
 // tl.set(menu,{scaleX:0, transformOrigin: 'right center'})
 return tl;
 }
+// function showMenu(){
+//   const menu = document.querySelector('.media-menu');
+//   const tl = new TimelineMax();
+//  tl.to(menu,1,{scaleX:1,transformOrigin: 'right center'})
+// // tl.from(menu,0.5,{scaleX: 0, transformOrigin: 'right center'})
+// // tl.set(menu,{scaleX:0, transformOrigin: 'right center'})
+// return tl;
+// }
+// function hideMenu(){
+//   const menu = document.querySelector('.media-menu');
+//   const tl = new TimelineMax();
+//  tl.to(menu,1,{scaleX:0,transformOrigin: 'right center'})
+// // tl.from(menu,0.5,{scaleX: 0, transformOrigin: 'right center'})
+// // tl.set(menu,{scaleX:0, transformOrigin: 'right center'})
+// return tl;
+// }

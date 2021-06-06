@@ -60,6 +60,7 @@ backBtn.addEventListener('click', () => {
 	// show landing page
 	document.querySelector('.now-playing').classList.remove('section-active');
 	document.querySelector('.landing').classList.add('section-active');
+	// pauseSong();
 });
 // Event listeners
 playBtn.addEventListener('click', playMusic);
