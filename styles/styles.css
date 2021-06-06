@@ -48,7 +48,6 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
 }
 
 .container .section h1 {
@@ -174,6 +173,8 @@ h5 {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .now-playing header .circle-wrapper {
@@ -191,6 +192,59 @@ h5 {
 
 .now-playing header .circle-wrapper .fa-bars {
   font-size: 2.2rem;
+}
+
+.now-playing header #menu {
+  position: relative;
+}
+
+.now-playing header #menu #media-burger {
+  z-index: 50;
+}
+
+.now-playing header #menu-toggle {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.now-playing header #menu-toggle .media-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 5rem;
+  border-radius: 5rem;
+  width: calc(100vw - 11rem);
+  padding: 0 2rem;
+  background-color: #36383a;
+  -webkit-box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.now-playing header #menu-toggle .media-menu #media-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+}
+
+.now-playing header #menu-toggle .media-menu #media-menu li {
+  width: 4.6rem;
+  text-align: center;
 }
 
 .now-playing .content-wrapper {
@@ -211,15 +265,16 @@ h5 {
           flex-direction: column;
 }
 
-.now-playing .content-wrapper .media-container {
+.now-playing .content-wrapper .media-container.media-turntable {
   width: 100%;
   padding: 1rem 2rem;
   display: -ms-grid;
   display: grid;
   place-content: center;
+  display: none;
 }
 
-.now-playing .content-wrapper .media-container .circle-wrapper.record {
+.now-playing .content-wrapper .media-container.media-turntable .circle-wrapper.vinyl {
   height: 20rem;
   width: 20rem;
   display: -ms-grid;
@@ -227,7 +282,7 @@ h5 {
   place-content: center;
 }
 
-.now-playing .content-wrapper .media-container .circle-wrapper.record #cover {
+.now-playing .content-wrapper .media-container.media-turntable .circle-wrapper.vinyl #vinyl {
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
@@ -237,7 +292,38 @@ h5 {
           animation-play-state: paused;
 }
 
-.now-playing .content-wrapper .media-container .circle-wrapper.record.play #cover {
+.now-playing .content-wrapper .media-container.media-turntable .circle-wrapper.vinyl.play #vinyl {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.now-playing .content-wrapper .media-container.media-cd {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.now-playing .content-wrapper .media-container.media-cd .circle-wrapper.record {
+  height: 20rem;
+  width: 20rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.now-playing .content-wrapper .media-container.media-cd .circle-wrapper.record #cover {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.now-playing .content-wrapper .media-container.media-cd .circle-wrapper.record.play #cover {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -310,7 +396,7 @@ h5 {
   width: 100%;
   border-top: 0.4rem solid #494a49;
   border-bottom: 0.4rem solid #494a49;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -4,7 +4,7 @@
 	// background-color: yellowgreen;
 	border-top: 0.4rem solid $line-border;
 	border-bottom: 0.4rem solid $line-border;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 2rem;
 	@include flex(space-between, center, row);
 	.progress-wrapper {
 		background-color: $bg-grey;

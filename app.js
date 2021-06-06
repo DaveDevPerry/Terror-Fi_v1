@@ -1,8 +1,14 @@
 import { startVisualiser } from './modules/visualisers.mjs';
-
+import { toggleMediaMenu } from './modules/animations.mjs';
+import { displayMedia } from './modules/toggleFunctions.mjs';
 const startBtn = document.querySelector('.circle-wrapper');
 const backBtn = document.querySelector('#t-back-btn');
 const sections = document.querySelectorAll('.section');
+const mediaMenu = document.querySelector('#menu');
+let menuStatus = false;
+const turnTableBtn = document.querySelector('#display-record');
+const discBtn = document.querySelector('#dislpay-cd');
+const cassetteBtn = document.querySelector('#display-cassette');
 
 const musicContainer = document.getElementById('music-container');
 const recordContainer = document.querySelector('.record');
@@ -56,6 +62,35 @@ audio.addEventListener('ended', nextSong);
 audio.addEventListener('timeupdate', getSongDuration);
 audio.addEventListener('timeupdate', getCurrentTime);
 audio.addEventListener('timeupdate', updateProgressBar);
+
+mediaMenu.addEventListener('click', () => {
+	menuStatus = toggleMediaMenu(menuStatus);
+});
+
+const mediaToDisplay = document.querySelectorAll('#media-menu li');
+mediaToDisplay.forEach((media) => {
+	// console.log(media);
+	// console.log(media.id);
+	media.addEventListener('click', () => {
+		displayMedia(media.id);
+	});
+});
+
+// turnTableBtn.addEventListener(){
+// 	toggleMediaMenu(menuStatus)
+// 	menuStatus = false;
+// 	// run record
+// }
+// discBtn.addEventListener(){
+// 	toggleMediaMenu(menuStatus)
+// 	menuStatus = false;
+// 	// run cd
+// }
+// cassetteBtn.addEventListener(){
+// 	toggleMediaMenu(menuStatus)
+// 	menuStatus = false;
+// 	//run cassette
+// }
 
 function playMusic() {
 	const isPlaying = recordContainer.classList.contains('play');
