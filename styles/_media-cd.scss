@@ -3,14 +3,8 @@
 		display: none;
 	}
 	.media-container.media-cd.media-active {
-		// height: 100%;
-		// width: 100%;
-		// background-color: red;
-		// padding: 1rem 2rem;
 		display: grid;
-		// display: none;
 		place-content: center;
-		// @include flex(space-between, center, column);
 		.circle-wrapper.record {
 			height: 20rem;
 			width: 20rem;

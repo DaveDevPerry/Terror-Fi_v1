@@ -361,6 +361,49 @@ h5 {
   place-content: center;
 }
 
+.content-wrapper .media-container.media-turntable.media-active #turntable {
+  background-color: #36383a;
+  width: 80vw;
+  height: 22rem;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.content-wrapper .media-container.media-turntable.media-active #turntable .circle-wrapper.lp-table {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  height: 20rem;
+  width: 20rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.content-wrapper .media-container.media-turntable.media-active #turntable .circle-wrapper.lp-table .black-vinyl {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.content-wrapper .media-container.media-turntable.media-active #turntable .circle-wrapper.lp-table .cover {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.content-wrapper .media-container.media-turntable.media-active #turntable .circle-wrapper.lp-table.play .cover {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
 .content-wrapper .media-container.media-cd {
   display: none;
 }

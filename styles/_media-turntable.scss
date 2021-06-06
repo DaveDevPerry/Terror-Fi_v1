@@ -3,15 +3,65 @@
 		display: none;
 	}
 	.media-container.media-turntable.media-active {
-		// height: 100%;
-		// width: 100%;
 		background-color: blue;
-		// padding: 4rem 0 4rem 2rem;
 		display: grid;
-		// display: none;
 		place-content: center;
-		// position: relative;
-		// @include flex(space-between, center, column);
+		#turntable {
+			background-color: $bg-grey;
+			width: 80vw;
+			height: 22rem;
+			border-radius: 2rem;
+			position: relative;
+			.circle-wrapper.lp-table {
+				position: absolute;
+				top: 50%;
+				left: 1rem;
+				transform: translate(0, -50%);
+				height: 20rem;
+				width: 20rem;
+				display: grid;
+				place-content: center;
+				.black-vinyl {
+					height: 20rem;
+					width: 20rem;
+					border-radius: 50%;
+					position: absolute;
+				}
+				.cover {
+					height: 6rem;
+					width: 6rem;
+					border-radius: 50%;
+					animation: rotate 10s linear infinite;
+					animation-play-state: paused;
+				}
+				// .vinyl-wrapper {
+				// 	height: 20rem;
+				// 	width: 20rem;
+				// 	border-radius: 50%;
+				// 	// animation: rotate 10s linear infinite;
+				// 	// animation-play-state: paused;
+				// 	position: relative;
+				// 	.black-vinyl {
+				// 		height: 20rem;
+				// 		width: 20rem;
+				// 		border-radius: 50%;
+				// 		position: absolute;
+				// 	}
+				// 	#vinyl-label {
+				// 		height: 6rem;
+				// 		width: 6rem;
+				// 		border-radius: 50%;
+				// 		position: absolute;
+				// 		top: 50%;
+				// 		left: 50%;
+				// 		transform: translate(-50%, -50%);
+				// 	}
+				// }
+			}
+			.circle-wrapper.lp-table.play .cover {
+				animation-play-state: running;
+			}
+		}
 		// .record-player {
 		// 	background-color: $bg-grey;
 		// 	width: 100%;

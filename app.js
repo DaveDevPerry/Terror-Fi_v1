@@ -19,6 +19,7 @@ const cassetteBtn = document.querySelector('#display-cassette');
 
 const musicContainer = document.getElementById('music-container');
 const recordContainer = document.querySelector('.record');
+const lpContainer = document.querySelector('.lp-table');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
@@ -111,6 +112,7 @@ function playMusic() {
 // Play song
 function playSong() {
 	recordContainer.classList.add('play');
+	lpContainer.classList.add('play');
 	playBtn.querySelector('i.fas').classList.remove('fa-play');
 	playBtn.querySelector('i.fas').classList.add('fa-pause');
 	audio.play();
@@ -131,6 +133,7 @@ function loadSong(song) {
 // Pause song
 function pauseSong() {
 	recordContainer.classList.remove('play');
+	lpContainer.classList.remove('play');
 	playBtn.querySelector('i.fas').classList.add('fa-play');
 	playBtn.querySelector('i.fas').classList.remove('fa-pause');
 	audio.pause();
