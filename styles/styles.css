@@ -238,6 +238,7 @@ h5 {
   height: 16rem;
   width: 100%;
   background-color: #36383a;
+  border-top: 0.4rem solid #d71313;
 }
 
 .now-playing footer .song-details {
