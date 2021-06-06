@@ -1,0 +1,19 @@
+.content-wrapper {
+	.media-container.media-default {
+		display: none;
+	}
+	.media-container.media-default.media-active {
+		// background-color: orange;
+		display: grid;
+		place-content: center;
+		// height: 25rem;
+		// overflow: hidden;
+		.default-cover {
+			// width: 100%;
+			height: 20rem;
+			// object-fit: cover;
+			border-radius: 2rem;
+			margin: 2rem 0;
+		}
+	}
+}

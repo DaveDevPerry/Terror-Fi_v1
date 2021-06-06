@@ -268,7 +268,6 @@ h5 {
 .now-playing .content-wrapper .media-container {
   height: 25rem;
   width: 100%;
-  background-color: lawngreen;
 }
 
 .now-playing .content-wrapper .progress-container {
@@ -335,6 +334,22 @@ h5 {
   outline: 0;
 }
 
+.content-wrapper .media-container.media-default {
+  display: none;
+}
+
+.content-wrapper .media-container.media-default.media-active {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.content-wrapper .media-container.media-default.media-active .default-cover {
+  height: 20rem;
+  border-radius: 2rem;
+  margin: 2rem 0;
+}
+
 .content-wrapper .media-container.media-turntable {
   display: none;
 }
@@ -351,7 +366,6 @@ h5 {
 }
 
 .content-wrapper .media-container.media-cd.media-active {
-  background-color: red;
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -365,7 +379,7 @@ h5 {
   place-content: center;
 }
 
-.content-wrapper .media-container.media-cd.media-active .circle-wrapper.record #cover {
+.content-wrapper .media-container.media-cd.media-active .circle-wrapper.record .cover {
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
@@ -375,7 +389,7 @@ h5 {
           animation-play-state: paused;
 }
 
-.content-wrapper .media-container.media-cd.media-active .circle-wrapper.record.play #cover {
+.content-wrapper .media-container.media-cd.media-active .circle-wrapper.record.play .cover {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }

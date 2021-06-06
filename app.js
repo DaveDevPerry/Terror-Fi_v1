@@ -28,6 +28,7 @@ const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
+const covers = document.querySelectorAll('.cover');
 const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 
@@ -122,7 +123,10 @@ function loadSong(song) {
 	const songTitle = song.replace(/\d+/g, '');
 	title.innerText = songTitle;
 	audio.src = `./music/${song}.mp3`;
-	cover.src = `./images/${song}.jpg`;
+	// cover.src = `./images/${song}.jpg`;
+	covers.forEach((cover) => {
+		cover.src = `./images/${song}.jpg`;
+	});
 }
 // Pause song
 function pauseSong() {
