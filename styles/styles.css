@@ -355,7 +355,6 @@ h5 {
 }
 
 .content-wrapper .media-container.media-turntable.media-active {
-  background-color: blue;
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -367,12 +366,14 @@ h5 {
   height: 22rem;
   border-radius: 2rem;
   position: relative;
+  -webkit-box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.55);
+          box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.55);
 }
 
 .content-wrapper .media-container.media-turntable.media-active #turntable .circle-wrapper.lp-table {
   position: absolute;
   top: 50%;
-  left: 1rem;
+  left: 2rem;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   height: 20rem;
@@ -402,6 +403,20 @@ h5 {
 .content-wrapper .media-container.media-turntable.media-active #turntable .circle-wrapper.lp-table.play .cover {
   -webkit-animation-play-state: running;
           animation-play-state: running;
+}
+
+.content-wrapper .media-container.media-turntable.media-active #turntable .record-player-arm {
+  position: absolute;
+  top: 0;
+  left: 20rem;
+  height: 22rem;
+}
+
+.content-wrapper .media-container.media-turntable.media-active #turntable .record-player-arm #player-arm {
+  height: 16rem;
+  margin-top: 3rem;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 .content-wrapper .media-container.media-cd {
