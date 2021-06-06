@@ -456,6 +456,198 @@ header .media-menu #media-menu li {
   place-content: center;
 }
 
+.content-wrapper .media-container.media-cassette.media-active #cassette {
+  width: 34rem;
+  height: 22rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.55);
+          box-shadow: -4px -4px 4px rgba(171, 171, 171, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.55);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-top {
+  height: 5.4rem;
+  background-color: #36383a;
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-top .tc-header {
+  color: #2d2e31;
+  text-align: right;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  font-weight: 800;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-top .tc-label {
+  background-color: #c4c4c4;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #d71313;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-reels {
+  height: 13.2rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-left: 2rem solid #36383a;
+  border-right: 2rem solid #36383a;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-reels .reel .tape {
+  height: 100%;
+  width: 100%;
+  background-color: #1d1301;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -webkit-animation: playTape 5s linear infinite;
+          animation: playTape 5s linear infinite;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-reels .reel .tape .spindle {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-reels .reel .tape #left-spindle {
+  background-image: url("../images/reel.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-size: 6rem;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-reels .reel .tape #right-spindle {
+  background-image: url("../images/reel-r.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-size: 6rem;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-reels #left-reel {
+  position: absolute;
+  height: 16rem;
+  width: 16rem;
+  top: 50%;
+  left: -1.5rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-reels #right-reel {
+  position: absolute;
+  height: 16rem;
+  width: 16rem;
+  top: 50%;
+  right: -1.5rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-bottom {
+  height: 5.4rem;
+  background-color: #36383a;
+  position: relative;
+  width: 100%;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-bottom .tc-footer {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  text-align: center;
+  padding: 0.1rem 0.4rem;
+  color: #2d2e31;
+  border: 1.5px solid #2d2e31;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-bottom .tc-base {
+  position: absolute;
+  width: 80%;
+  height: 4.4rem;
+  left: 50%;
+  bottom: -0.5rem;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-bottom: 4.4rem solid #2d2e31;
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-bottom .tc-base::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+  background-color: #222121;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-bottom .tc-base::after {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+  background-color: #222121;
+}
+
+@-webkit-keyframes playTape {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes playTape {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .progress-container {
   width: 100%;
   border-top: 0.4rem solid #494a49;
