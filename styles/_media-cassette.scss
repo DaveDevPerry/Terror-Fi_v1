@@ -35,10 +35,15 @@
 					background-color: $bg-light-grey;
 					width: 100%;
 					border-radius: 0.5rem;
-					text-align: center;
-					color: $primary-color;
-					font-size: 1.8rem;
-					font-style: italic;
+
+					.tape-title {
+						font-family: 'Rock Salt', cursive;
+						text-align: center;
+						color: $primary-color;
+						font-size: 1.4rem;
+						font-style: italic;
+						line-height: 2.2rem;
+					}
 				}
 			}
 			.tc-reels {

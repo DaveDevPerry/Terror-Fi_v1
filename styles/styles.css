@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -496,10 +497,15 @@ header .media-menu #media-menu li {
   background-color: #c4c4c4;
   width: 100%;
   border-radius: 0.5rem;
+}
+
+.content-wrapper .media-container.media-cassette.media-active #cassette .tc-top .tc-label .tape-title {
+  font-family: 'Rock Salt', cursive;
   text-align: center;
   color: #d71313;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-style: italic;
+  line-height: 2.2rem;
 }
 
 .content-wrapper .media-container.media-cassette.media-active #cassette .tc-reels {
