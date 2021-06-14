@@ -324,9 +324,9 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -338,10 +338,11 @@ h5 {
 }
 
 .landing .circle-wrapper {
-  height: 13rem;
-  width: 13rem;
+  height: 10rem;
+  width: 10rem;
   position: relative;
   cursor: pointer;
+  margin: 5rem auto;
 }
 
 .landing .circle-wrapper .fa-play {
@@ -351,18 +352,51 @@ h5 {
   -webkit-transform: translate(-40%, -50%);
           transform: translate(-40%, -50%);
   color: #bebebe;
-  font-size: 6rem;
+  font-size: 4rem;
+}
+
+.landing .brand-wrapper {
+  padding: 2rem;
+  border: 2px solid #36383a;
+  background-color: #d71313;
+  margin-right: 15rem;
+  width: 100%;
+  padding: 2rem 4rem;
+  text-align: right;
+  -webkit-transform: rotate(-2.5deg);
+          transform: rotate(-2.5deg);
+  margin-top: 8rem;
+  border-radius: 1rem;
+}
+
+.landing .brand-wrapper h1#brand {
+  font-size: 3rem;
+  color: white;
+  font-family: unset;
+  text-transform: uppercase;
+}
+
+.landing .launch-wrapper {
+  border: 2px solid #36383a;
+  background-color: #d71313;
+  margin-left: 15rem;
+  width: 100%;
+  padding: 2rem 4rem;
+  text-align: left;
+  -webkit-transform: rotate(-2.5deg);
+          transform: rotate(-2.5deg);
+  margin-bottom: 8rem;
+  border-radius: 1rem;
+}
+
+.landing .launch-wrapper .launch-btn {
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
 }
 
 .landing .circle-wrapper#lets-rock {
   border: 0.5rem solid #d71313;
-}
-
-.landing #brand {
-  margin: 10rem auto;
-  color: #bebebe;
-  font-size: 6rem;
-  letter-spacing: 0.2rem;
 }
 
 .now-playing {
@@ -910,7 +944,7 @@ header .media-menu #media-menu li {
 }
 
 .progress-container .progress-wrapper {
-  background-color: #a8a6a6;
+  background-color: #36383a;
   border-radius: 0.5rem;
   cursor: pointer;
   margin: 1rem 2rem;

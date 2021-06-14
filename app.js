@@ -2,7 +2,7 @@ import { startVisualiser } from './modules/visualisers.mjs';
 import { toggleMediaMenu } from './modules/animations.mjs';
 import { displayMedia } from './modules/toggleFunctions.mjs';
 import { loader } from './modules/loader.mjs';
-const startBtn = document.querySelector('.circle-wrapper');
+const startBtn = document.querySelector('.launch-wrapper');
 const backBtn = document.querySelector('#t-back-btn');
 const sections = document.querySelectorAll('.section');
 const mediaMenu = document.querySelector('#menu');
