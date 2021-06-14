@@ -590,7 +590,7 @@ header .media-menu #media-menu li {
 
 .content-wrapper .media-container.media-turntable.media-active #turntable {
   background-color: #36383a;
-  width: 80vw;
+  width: 28rem;
   height: 22rem;
   border-radius: 2rem;
   position: relative;
