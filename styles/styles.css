@@ -105,7 +105,7 @@ h5 {
   height: 100vh;
   width: 100%;
   height: 100%;
-  background-color: #36383a;
+  background-color: black;
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -192,6 +192,7 @@ h5 {
   place-self: flex-end;
   padding-bottom: 0.5rem;
   text-align: right;
+  color: #a8a6a6;
 }
 
 .container .loader .loader-wrapper .vol-dial .vol-num:last-child {
@@ -200,7 +201,7 @@ h5 {
 
 .container .loader .loader-wrapper .vol-dial .dial-wrapper .dial {
   position: relative;
-  background-color: black;
+  background-color: #a8a6a6;
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
@@ -227,7 +228,7 @@ h5 {
   width: 2rem;
   bottom: 1rem;
   left: 0;
-  background-color: black;
+  background-color: #a8a6a6;
 }
 
 @-webkit-keyframes turnItUp {
