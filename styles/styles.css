@@ -673,13 +673,61 @@ header .media-menu #media-menu li {
   top: 0;
   left: 20rem;
   height: 22rem;
+  width: 8rem;
+  padding-top: 4rem;
 }
 
-.content-wrapper .media-container.media-turntable.media-active #turntable .record-player-arm #player-arm {
+.content-wrapper .media-container.media-turntable.media-active #turntable .record-player-arm .arm-wrapper {
+  position: relative;
+  -webkit-animation: playRecord 60s ease infinite;
+          animation: playRecord 60s ease infinite;
+}
+
+.content-wrapper .media-container.media-turntable.media-active #turntable .record-player-arm .arm-wrapper #player-arm {
+  position: absolute;
   height: 16rem;
-  margin-top: 3rem;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  top: -1.4rem;
+  left: 0;
+  -webkit-transform: translate(-25%, 0);
+          transform: translate(-25%, 0);
+}
+
+@-webkit-keyframes playRecord {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  5% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  90% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes playRecord {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  5% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  90% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
 }
 
 .content-wrapper .media-container.media-cd {

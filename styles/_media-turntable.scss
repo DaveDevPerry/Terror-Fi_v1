@@ -70,13 +70,34 @@
 				top: 0;
 				left: 20rem;
 				height: 22rem;
+				width: 8rem;
+				padding-top: 4rem;
 				// background-color: lemonchiffon;
-
-				#player-arm {
-					height: 16rem;
-					margin-top: 3rem;
-					transform: rotate(-10deg);
+				// transform: rotate(30deg);
+				// transform-origin:  2rem;
+				// animation: playRecord 10s ease infinite;
+				.arm-wrapper {
+					position: relative;
+					// margin-top: 4rem;
+					// transform: rotate(2deg);
+					animation: playRecord 60s ease infinite;
+					#player-arm {
+						position: absolute;
+						height: 16rem;
+						top: -1.4rem;
+						left: 0;
+						transform: translate(-25%, 0);
+					}
 				}
+				// #player-arm {
+				// 	height: 16rem;
+				// 	margin-top: 3rem;
+				// 	// transform: rotate(-10deg);
+
+				// 	// transform-origin: center 2rem;
+				// 	// animation: playRecord 10s ease infinite;
+
+				// }
 			}
 		}
 		// .record-player {
@@ -162,5 +183,19 @@
 		// 		}
 		// 	}
 		// }
+	}
+}
+@keyframes playRecord {
+	0% {
+		transform: rotate(-10deg);
+	}
+	5% {
+		transform: rotate(2deg);
+	}
+	90% {
+		transform: rotate(25deg);
+	}
+	100% {
+		transform: rotate(-10deg);
 	}
 }

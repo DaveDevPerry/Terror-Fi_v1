@@ -7,5 +7,5 @@ export function loader(){
     tl.to('.loader',2,{y:'100%'})
 
     // make a gsap transition to slide the loader downwards
-  },12000)
+  },1000)
 }
