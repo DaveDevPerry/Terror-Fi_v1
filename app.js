@@ -49,7 +49,7 @@ const songs = [
 // Keep track of song
 let songIndex = 3;
 
-window.addEventListener('load', loader);
+// window.addEventListener('load', loader);
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);

@@ -110,6 +110,7 @@ h5 {
   display: grid;
   place-content: center;
   z-index: 500;
+  display: none;
 }
 
 .container .loader .loader-wrapper {
@@ -375,6 +376,16 @@ h5 {
   color: white;
   font-family: unset;
   text-transform: uppercase;
+}
+
+.landing .artist-launch-container {
+  -webkit-transform: rotate(-2.5deg);
+          transform: rotate(-2.5deg);
+}
+
+.landing .artist-launch-container img {
+  border: 2px solid #d71313;
+  border-radius: 1rem;
 }
 
 .landing .launch-wrapper {

@@ -43,6 +43,13 @@
 			text-transform: uppercase;
 		}
 	}
+	.artist-launch-container {
+		transform: rotate(-2.5deg);
+		img {
+			border: 2px solid $primary-color;
+			border-radius: 1rem;
+		}
+	}
 	.launch-wrapper {
 		border: 2px solid $bg-grey;
 		background-color: $primary-color;
