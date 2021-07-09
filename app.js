@@ -40,11 +40,17 @@ const songTime = document.querySelector('#song-time');
 const progressBar = document.querySelector('#progress');
 
 // Song titles
+// const songs = [
+// 	'04 Discotheque Wreck',
+// 	'08 Dog Chewed the Handle',
+// 	'09 Rock Radio',
+// 	'14 When I Die',
+// ];
 const songs = [
-	'04 Discotheque Wreck',
-	'08 Dog Chewed the Handle',
-	'09 Rock Radio',
-	'14 When I Die',
+	'01 (Not So) Hot',
+	'02 You Talk Too Much',
+	'03 I Could Die',
+	"04 She's A Drag",
 ];
 // Keep track of song
 let songIndex = 3;
