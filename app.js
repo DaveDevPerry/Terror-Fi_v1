@@ -2,13 +2,14 @@ import { startVisualiser } from './modules/visualisers.mjs';
 import { toggleMediaMenu } from './modules/animations.mjs';
 import { displayMedia } from './modules/toggleFunctions.mjs';
 import { loader } from './modules/loader.mjs';
-const startBtn = document.querySelector('.launch-wrapper');
+// const startBtn = document.querySelector('.launch-wrapper');
+const startBtn = document.querySelector('#spoilt-bratz-play-btn');
 const backBtn = document.querySelector('#t-back-btn');
 const sections = document.querySelectorAll('.section');
 const mediaMenu = document.querySelector('#menu');
 let menuStatus = false;
-const mediaDislpays = document.querySelectorAll('.media-container');
-// mediaDislpays.forEach((display) => {
+const mediaDisplays = document.querySelectorAll('.media-container');
+// mediaDisplays.forEach((display) => {
 // 	display.addEventListener('click', () => {
 // 		console.log(this);
 // 	});
@@ -51,9 +52,13 @@ const songs = [
 	'02 You Talk Too Much',
 	'03 I Could Die',
 	"04 She's A Drag",
+	'01 Sex Doll Love Cramp',
+	'02 Going Down Again',
+	'03 Stuck In A Rut',
+	"04 Crawlin' On Broken Glass",
 ];
 // Keep track of song
-let songIndex = 3;
+let songIndex = 7;
 
 // window.addEventListener('load', loader);
 
