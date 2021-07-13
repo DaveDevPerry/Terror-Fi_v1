@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@font-face {
+  font-family: 'BadSignal';
+  src: url("../fonts/BadSignal.otf");
+  font-display: swap;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -57,7 +63,9 @@ body {
 }
 
 h1 {
-  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 4rem;
+  font-family: 'BadSignal';
+  letter-spacing: 0.3rem;
 }
 
 h2 {
@@ -358,24 +366,30 @@ h5 {
 }
 
 .landing .brand-wrapper {
-  padding: 2rem;
   border: 2px solid #36383a;
   background-color: #d71313;
-  margin-right: 15rem;
+  margin-right: 5rem;
   width: 100%;
-  padding: 2rem 4rem;
-  text-align: right;
+  height: 1.5rem;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);
   margin-top: 8rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
 }
 
 .landing .brand-wrapper h1#brand {
-  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  -webkit-transform: translate(0, -40%);
+          transform: translate(0, -40%);
   color: white;
-  font-family: unset;
-  text-transform: uppercase;
+}
+
+.landing .brand-wrapper span#hyphen {
+  font-family: 'Roboto';
+  color: white;
 }
 
 .landing .artist-launch-container {
@@ -404,20 +418,26 @@ h5 {
 .landing .launch-wrapper {
   border: 2px solid #36383a;
   background-color: #d71313;
-  margin-left: 15rem;
+  margin-left: 5rem;
   width: 100%;
-  padding: 2rem 4rem;
-  text-align: left;
+  height: 2rem;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);
   margin-bottom: 8rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
 }
 
 .landing .launch-wrapper .launch-btn {
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  -webkit-transform: translate(0, -25%);
+          transform: translate(0, -25%);
   color: white;
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 3.6rem;
+  font-weight: 100;
+  letter-spacing: unset;
 }
 
 .landing .circle-wrapper#lets-rock {

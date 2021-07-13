@@ -24,23 +24,33 @@
 	}
 	.brand-wrapper {
 		// border: 2px solid $primary-color;
-		padding: 2rem;
+		// padding: 2rem;
 		// text-align: center;
 		border: 2px solid $bg-grey;
 		background-color: $primary-color;
-		margin-right: 15rem;
+		margin-right: 5rem;
 		width: 100%;
-		padding: 2rem 4rem;
-		text-align: right;
+		height: 1.5rem;
+		// padding: 0.5rem 4rem;
+		// text-align: right;
 		transform: rotate(-2.5deg);
 		margin-top: 8rem;
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 		// transform: rotate(-20deg);
+		position: relative;
 		h1#brand {
-			font-size: 3rem;
+			// font-size: 3rem;
+			position: absolute;
+			top: 0;
+			right: 0.5rem;
+			transform: translate(0, -40%);
 			color: $white;
-			font-family: unset;
-			text-transform: uppercase;
+			// font-family: unset;
+			// text-transform: uppercase;
+		}
+		span#hyphen {
+			font-family: 'Roboto';
+			color: $white;
 		}
 	}
 	.artist-launch-container {
@@ -56,29 +66,38 @@
 	.launch-wrapper {
 		border: 2px solid $bg-grey;
 		background-color: $primary-color;
-		margin-left: 15rem;
+		margin-left: 5rem;
 		width: 100%;
-		padding: 2rem 4rem;
-		text-align: left;
+		height: 2rem;
+		// padding: 1rem 4rem;
+		// text-align: left;
 		transform: rotate(-2.5deg);
 		margin-bottom: 8rem;
-		border-radius: 1rem;
+		border-radius: 0.5rem;
+		position: relative;
 		.launch-btn {
+			position: absolute;
+			top: 0;
+			left: 0.5rem;
+			transform: translate(0, -25%);
 			// width: 100%;
 			color: $white;
-			font-size: 3rem;
-			font-weight: 800;
+			font-size: 3.6rem;
+			// font-family: 'Roboto';
+			font-weight: 100;
+			letter-spacing: unset;
+			// font-weight: 800;
 		}
 	}
 	.circle-wrapper#lets-rock {
 		border: 0.5rem solid $primary-color;
 	}
-	#brand {
-		// margin: 10rem auto;
-		// margin: 5rem auto;
-		// color: rgb(190, 190, 190);
-		// font-size: 6rem;
-		// text-transform: uppercase;
-		// letter-spacing: 0.2rem;
-	}
+	// #brand {
+	// 	// margin: 10rem auto;
+	// 	// margin: 5rem auto;
+	// 	// color: rgb(190, 190, 190);
+	// 	// font-size: 6rem;
+	// 	// text-transform: uppercase;
+	// 	// letter-spacing: 0.2rem;
+	// }
 }

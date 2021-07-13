@@ -5,6 +5,11 @@
 	flex-direction: $d;
 }
 
+@font-face {
+	font-family: 'BadSignal';
+	src: url('../fonts/BadSignal.otf');
+	font-display: swap;
+}
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
