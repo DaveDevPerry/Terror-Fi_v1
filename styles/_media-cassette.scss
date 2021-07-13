@@ -16,6 +16,14 @@
 				4px 4px 4px rgba(0, 0, 0, 0.55);
 			@include flex(center, center, column);
 			// padding: 0 1rem;
+			// position: relative;
+			// #tape-label {
+			// 	position: absolute;
+			// 	z-index: 5000;
+			// 	top: 2rem;
+			// 	left: 2rem;
+			// 	opacity: 0.3;
+			// }
 			.tc-top {
 				height: 5.4rem;
 				// background-color: lemonchiffon;

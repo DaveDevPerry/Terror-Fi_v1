@@ -345,6 +345,25 @@ h5 {
       -ms-flex-direction: column;
           flex-direction: column;
   display: none;
+  position: relative;
+}
+
+.landing .app-info-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.landing .app-info-footer p {
+  font-size: 1.2rem;
+}
+
+.landing .app-info-footer a {
+  text-decoration: none;
+  color: black;
 }
 
 .landing .circle-wrapper {
@@ -373,7 +392,7 @@ h5 {
   height: 1.5rem;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);
-  margin-top: 8rem;
+  margin-top: 10rem;
   border-radius: 0.5rem;
   position: relative;
 }
@@ -420,10 +439,10 @@ h5 {
   background-color: #d71313;
   margin-left: 5rem;
   width: 100%;
-  height: 2rem;
+  height: 1.5rem;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
   border-radius: 0.5rem;
   position: relative;
 }
@@ -432,12 +451,11 @@ h5 {
   position: absolute;
   top: 0;
   left: 0.5rem;
-  -webkit-transform: translate(0, -25%);
-          transform: translate(0, -25%);
+  -webkit-transform: translate(0, -30%);
+          transform: translate(0, -30%);
   color: white;
   font-size: 3.6rem;
-  font-weight: 100;
-  letter-spacing: unset;
+  letter-spacing: 0.1rem;
 }
 
 .landing .circle-wrapper#lets-rock {
