@@ -59,9 +59,16 @@ const songs = [
 	'01 Pain Reliever',
 	'02 Past Times',
 	'03 Ignorance',
+	'01 Urban Space Crime',
+	'02 My House',
+	'03 Jason',
+	'01 Brand New Toy',
+	'02 Human Error',
+	'03 Pain Reliever',
+	'04 The Pilgrims Rest',
 ];
 // Keep track of song
-let songIndex = 10;
+let songIndex = 17;
 
 // window.addEventListener('load', loader);
 
@@ -139,6 +146,8 @@ function playSong() {
 	// start visualiser?
 	console.log(audio);
 	startVisualiser(audio);
+	// update artist name in dom
+	showArtistName(audio);
 }
 // Update song details
 function loadSong(song) {
@@ -211,6 +220,27 @@ function updateProgressBar(e) {
 	let percentPlayed = Math.round((currentTime / duration) * 100);
 	console.log(percentPlayed);
 	progressBar.style.width = `${percentPlayed}%`;
+}
+
+// shows band in browser
+function showArtistName(audio) {
+	console.log(audio);
+	console.log(audio.attributes[0].value);
+	console.log(typeof audio.attributes[0].value);
+	const artistElement = document.querySelector('.artist');
+	if (
+		audio.attributes[0].value.includes('Jason') ||
+		audio.attributes[0].value.includes('Urban') ||
+		audio.attributes[0].value.includes('House') ||
+		audio.attributes[0].value.includes('Toy') ||
+		audio.attributes[0].value.includes('Error') ||
+		audio.attributes[0].value.includes('03 Pain') ||
+		audio.attributes[0].value.includes('Pilgrims')
+	) {
+		artistElement.innerText = 'TERRORVISION';
+	} else {
+		artistElement.innerText = 'Spoilt bratz';
+	}
 }
 
 //get duration & currentTime for Time of song

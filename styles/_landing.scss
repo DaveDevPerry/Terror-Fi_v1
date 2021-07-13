@@ -45,9 +45,12 @@
 	}
 	.artist-launch-container {
 		transform: rotate(-2.5deg);
+		@include flex(center, center, column);
 		img {
-			border: 2px solid $primary-color;
-			border-radius: 1rem;
+			// border: 2px solid $primary-color;
+			// border-radius: 1rem;
+			width: 25rem;
+			margin: 1rem;
 		}
 	}
 	.launch-wrapper {
