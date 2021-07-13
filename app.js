@@ -56,9 +56,12 @@ const songs = [
 	'02 Going Down Again',
 	'03 Stuck In A Rut',
 	"04 Crawlin' On Broken Glass",
+	'01 Pain Reliever',
+	'02 Past Times',
+	'03 Ignorance',
 ];
 // Keep track of song
-let songIndex = 7;
+let songIndex = 10;
 
 // window.addEventListener('load', loader);
 
