@@ -102,8 +102,7 @@ h5 {
   color: #a8a6a6;
 }
 
-.container .loader {
-  display: none;
+.container .tv-loader {
   position: absolute;
   top: 0;
   left: 0;
@@ -116,214 +115,28 @@ h5 {
   display: grid;
   place-content: center;
   z-index: 500;
-  display: none;
 }
 
-.container .loader .loader-wrapper {
-  height: 20rem;
-  width: 15rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.container .loader .loader-wrapper .rock-on {
-  font-size: 3rem;
-  color: #d71313;
-  margin-bottom: 2rem;
-  -webkit-animation: letsRock 10s linear forwards;
-          animation: letsRock 10s linear forwards;
-}
-
-.container .loader .loader-wrapper .vol-level {
-  height: 5rem;
-  overflow: hidden;
-  margin: 1rem 0;
-}
-
-.container .loader .loader-wrapper .vol-level #loader-list {
-  width: 60%;
-  margin: auto;
-  -webkit-animation: numbers 10s linear forwards;
-          animation: numbers 10s linear forwards;
-}
-
-.container .loader .loader-wrapper .vol-level #loader-list .loader-nums {
-  color: #a8a6a6;
-  font-size: 5rem;
-  height: 7.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.container .loader .loader-wrapper .vol-dial {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 8rem;
-}
-
-.container .loader .loader-wrapper .vol-dial .vol-num {
-  width: 2rem;
-  place-self: flex-end;
-  padding-bottom: 0.5rem;
-  text-align: right;
-  color: #a8a6a6;
-}
-
-.container .loader .loader-wrapper .vol-dial .vol-num:last-child {
-  text-align: left;
-}
-
-.container .loader .loader-wrapper .vol-dial .dial-wrapper .dial {
+.container .tv-loader .tv-wrapper {
   position: relative;
-  background-color: #a8a6a6;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  -webkit-animation: turnItUp 10s linear forwards;
-          animation: turnItUp 10s linear forwards;
+  width: 200px;
+  height: 239px;
 }
 
-.container .loader .loader-wrapper .vol-dial .dial-wrapper .dial div {
+.container .tv-loader .tv-wrapper img#tv-signal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  background-color: #8b8b89;
+  top: 120px;
+  left: 28px;
+  width: 110px;
+  height: 50px;
 }
 
-.container .loader .loader-wrapper .vol-dial .dial-wrapper .dial::before {
+.container .tv-loader .tv-wrapper img#terror-tv {
   position: absolute;
-  content: '';
-  height: 1rem;
-  width: 2rem;
-  bottom: 1rem;
+  top: 0;
   left: 0;
-  background-color: #a8a6a6;
-}
-
-@-webkit-keyframes turnItUp {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  50%,
-  80% {
-    -webkit-transform: rotate(245deg);
-            transform: rotate(245deg);
-  }
-  99%,
-  100% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
-  }
-}
-
-@keyframes turnItUp {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  50%,
-  80% {
-    -webkit-transform: rotate(245deg);
-            transform: rotate(245deg);
-  }
-  99%,
-  100% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
-  }
-}
-
-@-webkit-keyframes numbers {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50%,
-  80% {
-    -webkit-transform: translateY(-85%);
-            transform: translateY(-85%);
-  }
-  99%,
-  100% {
-    -webkit-transform: translateY(-94%);
-            transform: translateY(-94%);
-  }
-}
-
-@keyframes numbers {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50%,
-  80% {
-    -webkit-transform: translateY(-85%);
-            transform: translateY(-85%);
-  }
-  99%,
-  100% {
-    -webkit-transform: translateY(-94%);
-            transform: translateY(-94%);
-  }
-}
-
-@-webkit-keyframes letsRock {
-  0%,
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes letsRock {
-  0%,
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  width: 200px;
+  z-index: 100000;
 }
 
 .landing {

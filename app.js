@@ -1,7 +1,7 @@
 import { startVisualiser } from './modules/visualisers.mjs';
 import { toggleMediaMenu } from './modules/animations.mjs';
 import { displayMedia } from './modules/toggleFunctions.mjs';
-import { loader } from './modules/loader.mjs';
+import { tvLoader } from './modules/tvLoader.mjs';
 // const startBtn = document.querySelector('.launch-wrapper');
 // const startBtn = document.querySelector('#spoilt-bratz-play-btn');
 const startBtn = document.querySelector('.artist-launch-container');
@@ -72,6 +72,7 @@ const songs = [
 let songIndex = 17;
 
 // window.addEventListener('load', loader);
+window.addEventListener('DOMContentLoaded', tvLoader);
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
