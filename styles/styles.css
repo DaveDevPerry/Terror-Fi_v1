@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 @font-face {
@@ -430,8 +428,17 @@ h5 {
 }
 
 .landing .artist-launch-container img {
-  width: 25rem;
   margin: 1rem;
+}
+
+.landing .artist-launch-container #spoilt-bratz-play-btn {
+  width: 25rem;
+  height: 11.7rem;
+}
+
+.landing .artist-launch-container #tv-demo-play-btn {
+  width: 23.8rem;
+  height: 18.6rem;
 }
 
 .landing .launch-wrapper {
