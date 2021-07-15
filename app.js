@@ -17,7 +17,7 @@ const mediaDisplays = document.querySelectorAll('.media-container');
 // });
 
 const turnTableBtn = document.querySelector('#display-record');
-const discBtn = document.querySelector('#dislpay-cd');
+const discBtn = document.querySelector('#display-cd');
 const cassetteBtn = document.querySelector('#display-cassette');
 
 const musicContainer = document.getElementById('music-container');
