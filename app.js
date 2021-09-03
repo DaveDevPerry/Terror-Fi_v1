@@ -67,9 +67,13 @@ const songs = [
 	'02 Human Error',
 	'03 Pain Reliever',
 	'04 The Pilgrims Rest',
+	'01 Making Your Mind Up',
+	'14 Bring Your Daughter To The Slaughter',
+	"09 Keep On Movin'",
 ];
+
 // Keep track of song
-let songIndex = 17;
+let songIndex = 20;
 
 // window.addEventListener('load', loader);
 window.addEventListener('DOMContentLoaded', tvLoader);
@@ -226,9 +230,9 @@ function updateProgressBar(e) {
 
 // shows band in browser
 function showArtistName(audio) {
-	console.log(audio);
-	console.log(audio.attributes[0].value);
-	console.log(typeof audio.attributes[0].value);
+	// console.log(audio);
+	// console.log(audio.attributes[0].value);
+	// console.log(typeof audio.attributes[0].value);
 	const artistElement = document.querySelector('.artist');
 	if (
 		audio.attributes[0].value.includes('Jason') ||
@@ -237,11 +241,14 @@ function showArtistName(audio) {
 		audio.attributes[0].value.includes('Toy') ||
 		audio.attributes[0].value.includes('Error') ||
 		audio.attributes[0].value.includes('03 Pain') ||
-		audio.attributes[0].value.includes('Pilgrims')
+		audio.attributes[0].value.includes('Pilgrims') ||
+		audio.attributes[0].value.includes('Daughter') ||
+		audio.attributes[0].value.includes('Making') ||
+		audio.attributes[0].value.includes('Keep')
 	) {
 		artistElement.innerText = 'TERRORVISION';
 	} else {
-		artistElement.innerText = 'Spoilt bratz';
+		artistElement.innerText = 'Spoilt Bratz';
 	}
 }
 
