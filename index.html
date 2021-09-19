@@ -1,52 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="A streaming app for all your Terrorvision songs" />
-    <meta name="robots" content="index,follow" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/site.webmanifest">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="preload" as="style"/>
-    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
-    <link  rel="stylesheet" href="./styles/styles.css" />
-  
-    <title>TERROR-Fi</title>
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.min.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="A streaming app for all your Terrorvision songs"
+		/>
+		<meta name="robots" content="index,follow" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./favicon/site.webmanifest" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+			rel="preload"
+			as="style"
+		/>
+		<script
+			src="https://code.iconify.design/1/1.0.6/iconify.min.js"
+			defer
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+		<link rel="stylesheet" href="./styles/styles.css" />
+
+		<title>TERROR-Fi</title>
+		<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.min.js"></script>
 	
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/addons/p5.sound.min.js"></script>
 	<script type="text/javascript" src="sketch.js"></script> -->
-  </head>
-  <body>
+	</head>
+	<body>
+		<div class="container">
+			<div class="background"></div>
 
-
-
-<div class="container">
-
-  <div class="background"></div>
-
-  <section class="tv-loader">
-
-   
-
-    <div class="tv-wrapper">
-      <img src="./images/tv-signal.png" alt="tv signal" id="tv-signal">
-<img src="./images/tv-telly_grey.png" alt="telly" id="terror-tv">
-    </div>
-    <!-- <p class="glitch">
+			<section class="tv-loader">
+				<div class="tv-wrapper">
+					<img src="./images/tv-signal.png" alt="tv signal" id="tv-signal" />
+					<img src="./images/tv-telly_grey.png" alt="telly" id="terror-tv" />
+				</div>
+				<!-- <p class="glitch">
      
       Terror<span id="glitch-hyphen">-</span>Fi
     </p> -->
-  
-  </section>
+			</section>
 
-  <!-- <section class="loader">
+			<!-- <section class="loader">
     <div class="loader-wrapper">
       <div class="rock-on">Rock On!</div>
     
@@ -79,58 +99,61 @@
     </div>
   </section> -->
 
-  <section class="landing section section-active">
-   <div class="app-info-footer">
-    <p>
-      designed & developed by 
-      <a href="https://daveperry.tech" rel="noopener" target="_blank">daveperry.tech</a>
-     
-   </div>
+			<section class="landing section section-active">
+				<div class="app-info-footer">
+					<p>
+						designed & developed @ daveperry.tech
+						<!-- <a href="#" rel="noopener" target="_blank">daveperry.tech</a> -->
+					</p>
+				</div>
 
-<div class="brand-wrapper">
-  
-  <h1 id="brand">Terror<span id="hyphen">-</span>Fi</h1>
-</div>
+				<div class="brand-wrapper">
+					<h1 id="brand">Terror<span id="hyphen">-</span>Fi</h1>
+				</div>
 
-<div class="artist-launch-container">
-  
-  <div class="artist-launch-wrapper" id="spoilt-bratz-launch-wrapper">
-    <img src="./images/sb_logo_trans_black.png" id="spoilt-bratz-play-btn" alt="launch spoilt bratz">
-  </div>
+				<div class="artist-launch-container">
+					<div class="artist-launch-wrapper" id="spoilt-bratz-launch-wrapper">
+						<img
+							src="./images/sb_logo_trans_black.png"
+							id="spoilt-bratz-play-btn"
+							alt="launch spoilt bratz"
+						/>
+					</div>
 
-  <div class="artist-launch-wrapper" id="tv-demos-launch-wrapper">
-    <img src="./images/terrorvision_demo_logo1.png" id="tv-demo-play-btn" alt="launch terrorvision demos">
-  </div>
-</div>
+					<div class="artist-launch-wrapper" id="tv-demos-launch-wrapper">
+						<img
+							src="./images/terrorvision_demo_logo1.png"
+							id="tv-demo-play-btn"
+							alt="launch terrorvision demos"
+						/>
+					</div>
+				</div>
 
-<div class="launch-wrapper">
-  <!-- <h1 class="launch-btn" id="lets-rock">
+				<div class="launch-wrapper">
+					<!-- <h1 class="launch-btn" id="lets-rock">
     party over here
   </h1> -->
-  <!-- <h1 class="launch-btn" id="lets-rock">
+					<!-- <h1 class="launch-btn" id="lets-rock">
     Rock it, in your Pocket
   </h1> -->
-  <!-- <h1 class="launch-btn" id="lets-rock">
+					<!-- <h1 class="launch-btn" id="lets-rock">
     Those were the days
   </h1> -->
-  <h1 class="launch-btn" id="lets-rock">
-    The Demo Tapes
-  </h1>
-</div>
-    
-    <!-- <div class="circle-wrapper" id="lets-rock">
+					<h1 class="launch-btn" id="lets-rock">The Demo Tapes</h1>
+				</div>
+
+				<!-- <div class="circle-wrapper" id="lets-rock">
       <i class="fas fa-play"></i>
     </div> -->
-    <!-- <div class="circle-wrapper" id="lets-rock">
+				<!-- <div class="circle-wrapper" id="lets-rock">
       <i class="fas fa-play"></i>
     </div>
     <h1 id="brand">Terror-Fi</h1> -->
-  </section>
+			</section>
 
-  <section class="now-playing  section ">
-
-    <header>
-      <!-- <div class="circle-wrapper" id="t-back-btn">
+			<section class="now-playing section">
+				<header>
+					<!-- <div class="circle-wrapper" id="t-back-btn">
         <i class="fas fa-angle-left"></i>
       </div>
       <h5 class="page-heading">Now Playing</h5>
@@ -151,22 +174,20 @@
         </div>
         <i class="fas fa-bars" id="media-burger"></i>
       </div> -->
-      <div class="circle-wrapper" id="t-back-btn">
-        <i class="fas fa-angle-left"></i>
-      </div>
+					<div class="circle-wrapper" id="t-back-btn">
+						<i class="fas fa-angle-left"></i>
+					</div>
 
-      <h5 class="page-heading">Now Playing</h5>
+					<h5 class="page-heading">Now Playing</h5>
 
-      <!-- <div class="menu-wrapper"> -->
-        <div class="circle-wrapper" id="menu">
-          <i class="fas fa-bars" id="media-burger"></i>
-        </div>
+					<!-- <div class="menu-wrapper"> -->
+					<div class="circle-wrapper" id="menu">
+						<i class="fas fa-bars" id="media-burger"></i>
+					</div>
 
+					<!-- <div class="circle-wrapper" id="menu-toggle"> -->
 
-
-        <!-- <div class="circle-wrapper" id="menu-toggle"> -->
-          
-          <!-- <div class="media-menu">
+					<!-- <div class="media-menu">
             <ul id="media-menu">
               <li id="display-default">
                 <span class="iconify" data-inline="false" data-icon="akar-icons:image" style="color: #a8a6a6; font-size: 32px;"></span>
@@ -184,67 +205,88 @@
             </ul>
           </div> -->
 
-        <!-- </div> -->
-        
-      <!-- </div> -->
+					<!-- </div> -->
 
-      <div class="media-menu">
-        <ul id="media-menu">
-          <li id="display-default">
-            <span class="iconify" data-inline="false" data-icon="akar-icons:image" style="color: #ffffff; font-size: 32px;"></span>
-          </li>
-          <li id="display-record">
-            <span class="iconify" data-inline="false" data-icon="mdi:record-player" style="color: #ffffff; font-size: 46px;"></span>
-          </li>
-          <li id="display-cd">
-            <span class="iconify" data-inline="false" data-icon="mdi:record-circle" style="color: #ffffff; font-size: 29px;"></span>
-          </li>
-          <li id="display-cassette">
-            <span class="iconify" data-inline="false" data-icon="si-glyph:casette" style="color: #ffffff; font-size: 32px;"></span>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </header>
+					<!-- </div> -->
 
-    <div class="content-wrapper">
+					<div class="media-menu">
+						<ul id="media-menu">
+							<li id="display-default">
+								<span
+									class="iconify"
+									data-inline="false"
+									data-icon="akar-icons:image"
+									style="color: #ffffff; font-size: 32px"
+								></span>
+							</li>
+							<li id="display-record">
+								<span
+									class="iconify"
+									data-inline="false"
+									data-icon="mdi:record-player"
+									style="color: #ffffff; font-size: 46px"
+								></span>
+							</li>
+							<li id="display-cd">
+								<span
+									class="iconify"
+									data-inline="false"
+									data-icon="mdi:record-circle"
+									style="color: #ffffff; font-size: 29px"
+								></span>
+							</li>
+							<li id="display-cassette">
+								<span
+									class="iconify"
+									data-inline="false"
+									data-icon="si-glyph:casette"
+									style="color: #ffffff; font-size: 32px"
+								></span>
+							</li>
+						</ul>
+					</div>
+				</header>
 
+				<div class="content-wrapper">
+					<div class="media-container media-turntable display-record">
+						<div id="turntable">
+							<div class="circle-wrapper lp-table">
+								<img
+									src="./images/vinyl.png"
+									alt="vinyl record"
+									class="black-vinyl"
+								/>
+								<img
+									src="./images/01 (Not So) Hot.jpg"
+									alt="music-cover"
+									class="cover"
+								/>
+							</div>
 
-
-
-
-      <div class="media-container media-turntable display-record ">
-        <div id="turntable">
-
-          <div class="circle-wrapper lp-table">
-            <img src="./images/vinyl.png" alt="vinyl record" class="black-vinyl" />
-            <img src="./images/01 (Not So) Hot.jpg" alt="music-cover" class="cover" />
-          </div>
-
-          <div class="record-player-arm">
-            <div class="arm-wrapper">
-
-              <img src="./images/record-player-arm-1.png" alt="turntable arm" id="player-arm">
-            </div>
-            <!-- <img src="./images/record player arm.png" alt="turntable arm" id="player-arm"> -->
-            
-          </div>
-          <!-- <div class="record-player-arm">
+							<div class="record-player-arm">
+								<div class="arm-wrapper">
+									<img
+										src="./images/record-player-arm-1.png"
+										alt="turntable arm"
+										id="player-arm"
+									/>
+								</div>
+								<!-- <img src="./images/record player arm.png" alt="turntable arm" id="player-arm"> -->
+							</div>
+							<!-- <div class="record-player-arm">
            
             <img src="./images/record-player-arm-1.png" alt="turntable arm" id="player-arm">
           </div> -->
-
-        </div>
-<!-- <div id="turntable">
+						</div>
+						<!-- <div id="turntable">
   <div class="circle-wrapper record">
  
       <img src="./images/vinyl.png" alt="vinyl record" class="black-vinyl" />
      <img src="./images/04 Discotheque Wreck.jpg" alt="record label" class="vinyl-label cover" id="vinyl-label"> 
     
   </div> -->
-<!-- </div> -->
-        <!-- <div class="record-player">
+						<!-- </div> -->
+						<!-- <div class="record-player">
 
           <div class="circle-wrapper vinyl">
             <img src="./images/vinyl.png" alt="vinyl record" id="cover1" />
@@ -257,126 +299,121 @@
           </div>
 
         </div> -->
-       
-      </div>
+					</div>
 
-      <!-- WORKING  -->
-      <div class="media-container media-default display-default media-active">
-        <div class="default-wrapper">
-          <img src="./images/01 (Not So) Hot.jpg" alt="music-cover" class="cover default-cover"  />
-        </div>
-      </div>
+					<!-- WORKING  -->
+					<div
+						class="media-container media-default display-default media-active"
+					>
+						<div class="default-wrapper">
+							<img
+								src="./images/01 (Not So) Hot.jpg"
+								alt="music-cover"
+								class="cover default-cover"
+							/>
+						</div>
+					</div>
 
-      <!-- WORKING  -->
-      <div class="media-container media-cd display-cd">
-        <div class="circle-wrapper record">
-          <img src="./images/01 (Not So) Hot.jpg" alt="music-cover" class="cover" />
-        </div>
-      </div>
+					<!-- WORKING  -->
+					<div class="media-container media-cd display-cd">
+						<div class="circle-wrapper record">
+							<img
+								src="./images/01 (Not So) Hot.jpg"
+								alt="music-cover"
+								class="cover"
+							/>
+						</div>
+					</div>
 
+					<div class="media-container media-cassette display-cassette">
+						<div id="cassette">
+							<!-- <img src="./images/tape_label.png" id="tape-label"> -->
 
-      <div class="media-container media-cassette display-cassette ">
+							<div class="tc-top">
+								<div class="tc-header">C90</div>
+								<!-- <div class="tc-label">song title here</div> -->
+								<div class="tc-label">
+									<div class="tape-title">total vegas</div>
+								</div>
+							</div>
 
-<div id="cassette">
-  <!-- <img src="./images/tape_label.png" id="tape-label"> -->
+							<div class="tc-reels">
+								<div class="reel" id="left-reel">
+									<div class="tape">
+										<div class="spindle" id="left-spindle">
+											<!-- <img src="./images/reel.png" alt="tape reel"> -->
+										</div>
+									</div>
+								</div>
+								<div class="reel" id="right-reel">
+									<div class="tape">
+										<div class="spindle" id="right-spindle">
+											<!-- <img src="./images/reel.png" alt="tape reel"> -->
+										</div>
+									</div>
+								</div>
+							</div>
 
-<div class="tc-top">
-  <div class="tc-header">C90</div>
-  <!-- <div class="tc-label">song title here</div> -->
-  <div class="tc-label">
-  <div class="tape-title">total vegas</div>
-  </div>
-</div>
+							<div class="tc-bottom">
+								<div class="tc-footer">A</div>
+								<div class="tc-base"></div>
+							</div>
+						</div>
+					</div>
 
-<div class="tc-reels">
+					<div class="progress-container">
+						<div class="progress-time" id="current-time">00:00</div>
+						<div class="progress-wrapper" id="progress-wrapper">
+							<div class="progress" id="progress"></div>
+						</div>
+						<div class="progress-time" id="song-time">03:11</div>
+					</div>
 
-<div class="reel" id="left-reel">
-  <div class="tape">
-    <div class="spindle" id="left-spindle">
-      <!-- <img src="./images/reel.png" alt="tape reel"> -->
-    </div>
-  </div>
-</div>
-<div class="reel" id="right-reel">
-  <div class="tape">
-    <div class="spindle"  id="right-spindle">
-      <!-- <img src="./images/reel.png" alt="tape reel"> -->
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="tc-bottom">
-  <div class="tc-footer">A</div>
-  <div class="tc-base"></div>
-</div>
-
-
-</div>
-      </div>
-
-      <div class="progress-container">
-        <div class="progress-time" id="current-time">00:00</div>
-        <div class="progress-wrapper" id="progress-wrapper">
-          <div class="progress" id="progress"></div>
-        </div>
-        <div class="progress-time" id="song-time">03:11</div>
-      </div>
-
-      <!-- <div class="song-details">
+					<!-- <div class="song-details">
         <div class="music-info">
           <h2 class="song-title" id="title"></h2>
           <h3 class="artist">Terrorvision</h3>
         </div>
       </div> -->
 
-      <div class="visualyser-container">
-        <div id="container">
-          <canvas id="canvas1"></canvas>
-        </div>
-      </div>
+					<div class="visualyser-container">
+						<div id="container">
+							<canvas id="canvas1"></canvas>
+						</div>
+					</div>
+				</div>
 
-    </div>
+				<footer>
+					<div class="song-details">
+						<div class="music-info">
+							<h2 class="song-title" id="title"></h2>
+							<h3 class="artist">Spoilt Bratz</h3>
+						</div>
+					</div>
 
-  <footer>
-
-    <div class="song-details">
-      <div class="music-info">
-        <h2 class="song-title" id="title"></h2>
-        <h3 class="artist">Spoilt Bratz</h3>
-      </div>
-    </div>
-
-    <div class="player-controls">
-      <button id="prev" class="action-btn">
-        <i class="fas fa-backward"></i>
-      </button>
-      <button id="play" class="action-btn action-btn-big">
-        <i class="fas fa-play"></i>
-      </button>
-      <button id="next" class="action-btn">
-        <i class="fas fa-forward"></i>
-        <!-- <span class="material-icons-round">
+					<div class="player-controls">
+						<button id="prev" class="action-btn">
+							<i class="fas fa-backward"></i>
+						</button>
+						<button id="play" class="action-btn action-btn-big">
+							<i class="fas fa-play"></i>
+						</button>
+						<button id="next" class="action-btn">
+							<i class="fas fa-forward"></i>
+							<!-- <span class="material-icons-round">
           skip_next
           </span> -->
-        
-         
-      </button>
-    </div>
+						</button>
+					</div>
+				</footer>
+			</section>
 
-  </footer>
+			<div class="music-container" id="music-container">
+				<audio src="./music/01 (Not So) Hot.mp3" id="audio"></audio>
+			</div>
+		</div>
 
-</section>
-
-
-<div class="music-container" id="music-container">
-  <audio src="./music/01 (Not So) Hot.mp3" id="audio"></audio>
-</div>
-
-
-    </div>
-    
-    <!-- <h1>Music Player</h1>
+		<!-- <h1>Music Player</h1>
 
     <div class="music-container" id="music-container">
       <div class="music-info">
@@ -404,9 +441,7 @@
       </div>
     </div> -->
 
-
-
-    <script type="module" src="./app.js"></script>
-    <script src="./script.js"></script>
-  </body>
+		<script type="module" src="./app.js"></script>
+		<script src="./script.js"></script>
+	</body>
 </html>
