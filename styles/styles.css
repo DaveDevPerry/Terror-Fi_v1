@@ -243,6 +243,53 @@ h5 {
   }
 }
 
+.tv-wrapper {
+  position: relative;
+  width: 200px;
+  height: 239px;
+}
+
+.tv-wrapper #tv-signal {
+  position: absolute;
+  top: 120px;
+  left: 28px;
+  width: 110px;
+  height: 50px;
+  background: url("../images/tv-signal.png");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  /*adjust s value for speed*/
+  -webkit-animation: tvSignal 500s linear infinite;
+          animation: tvSignal 500s linear infinite;
+}
+
+.tv-wrapper img#terror-tv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  z-index: 100000;
+}
+
+@-webkit-keyframes tvSignal {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 0;
+  }
+}
+
+@keyframes tvSignal {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 0;
+  }
+}
+
 .landing {
   height: 100%;
   width: 100%;
@@ -279,6 +326,7 @@ h5 {
 .landing .app-info-footer a {
   text-decoration: none;
   color: black;
+  font-weight: 400;
 }
 
 .landing .circle-wrapper {
