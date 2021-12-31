@@ -72,8 +72,12 @@ const songs = [
 	"09 Keep On Movin'",
 ];
 
+const randomFirstTrack = Math.floor(Math.random() * songs.length);
+console.log('random ', randomFirstTrack);
 // Keep track of song
-let songIndex = 20;
+// let songIndex = 20;
+let songIndex = randomFirstTrack;
+// let songIndex = Math.floor(Math.random() * songIndex.length);
 
 // window.addEventListener('load', loader);
 window.addEventListener('DOMContentLoaded', tvLoader);
