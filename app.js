@@ -67,7 +67,7 @@ const songs = [
 	'02 Human Error',
 	'03 Pain Reliever',
 	'04 The Pilgrims Rest',
-	'01 Making Your Mind Up',
+	'01 Under the Moon of Love',
 	'14 Bring Your Daughter To The Slaughter',
 	"09 Keep On Movin'",
 ];
@@ -247,7 +247,7 @@ function showArtistName(audio) {
 		audio.attributes[0].value.includes('03 Pain') ||
 		audio.attributes[0].value.includes('Pilgrims') ||
 		audio.attributes[0].value.includes('Daughter') ||
-		audio.attributes[0].value.includes('Making') ||
+		audio.attributes[0].value.includes('Moon') ||
 		audio.attributes[0].value.includes('Keep')
 	) {
 		artistElement.innerText = 'TERRORVISION';
