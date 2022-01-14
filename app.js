@@ -48,7 +48,8 @@ const progressBar = document.querySelector('#progress');
 // 	'09 Rock Radio',
 // 	'14 When I Die',
 // ];
-const songs = [
+
+let songs = [
 	'01 (Not So) Hot',
 	'02 You Talk Too Much',
 	'03 I Could Die',
@@ -71,6 +72,30 @@ const songs = [
 	'14 Bring Your Daughter To The Slaughter',
 	"09 Keep On Movin'",
 ];
+songs = songs.sort(() => Math.random() - 0.5);
+// const songs = [
+// 	'01 (Not So) Hot',
+// 	'02 You Talk Too Much',
+// 	'03 I Could Die',
+// 	"04 She's A Drag",
+// 	'01 Sex Doll Love Cramp',
+// 	'02 Going Down Again',
+// 	'03 Stuck In A Rut',
+// 	"04 Crawlin' On Broken Glass",
+// 	'01 Pain Reliever',
+// 	'02 Past Times',
+// 	'03 Ignorance',
+// 	'01 Urban Space Crime',
+// 	'02 My House',
+// 	'03 Jason',
+// 	'01 Brand New Toy',
+// 	'02 Human Error',
+// 	'03 Pain Reliever',
+// 	'04 The Pilgrims Rest',
+// 	'01 Under the Moon of Love',
+// 	'14 Bring Your Daughter To The Slaughter',
+// 	"09 Keep On Movin'",
+// ];
 
 const randomFirstTrack = Math.floor(Math.random() * songs.length);
 console.log('random ', randomFirstTrack);
