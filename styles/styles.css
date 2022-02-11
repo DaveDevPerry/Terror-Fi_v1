@@ -52,8 +52,11 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  width: clamp(32rem, 100%, 800px);
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .container .section h1 {
@@ -1124,6 +1127,17 @@ header .media-menu #media-menu li {
 @media only screen and (max-height: 670px) {
   .visualyser-container {
     display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .progress-container {
+    border: 0.2rem solid #36383a;
+    border-radius: 10px;
+  }
+  footer {
+    border: 0.4rem solid #d71313;
+    border-radius: 10px;
   }
 }
 

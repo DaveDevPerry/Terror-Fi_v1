@@ -47,8 +47,11 @@ body {
 		position: absolute;
 		height: 100%;
 		width: 100%;
+		width: clamp(32rem, 100%, 800px);
 		top: 0;
-		left: 0;
+		// left: 0;
+		left: 50%;
+		transform: translateX(-50%);
 		// z-index: 10;
 		h1 {
 			color: $primary-color;

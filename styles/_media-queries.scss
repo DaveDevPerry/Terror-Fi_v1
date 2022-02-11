@@ -3,3 +3,14 @@
 		display: none;
 	}
 }
+@media screen and (min-width: 800px) {
+	.progress-container {
+		border: 0.2rem solid #36383a;
+		border-radius: 10px;
+	}
+	footer {
+		border: 0.4rem solid #d71313;
+		border-radius: 10px;
+		// background-color: #3b4045;
+	}
+}

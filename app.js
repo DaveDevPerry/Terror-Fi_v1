@@ -98,7 +98,7 @@ songs = songs.sort(() => Math.random() - 0.5);
 // ];
 
 const randomFirstTrack = Math.floor(Math.random() * songs.length);
-console.log('random ', randomFirstTrack);
+// console.log('random ', randomFirstTrack);
 // Keep track of song
 // let songIndex = 20;
 let songIndex = randomFirstTrack;
@@ -123,6 +123,7 @@ backBtn.addEventListener('click', () => {
 	document.querySelector('.landing').classList.add('section-active');
 	pauseSong();
 });
+
 // Event listeners
 playBtn.addEventListener('click', playMusic);
 // Change song
@@ -223,14 +224,14 @@ function nextSong() {
 }
 //get song duration
 function getSongDuration(e) {
-	console.log(e.srcElement.duration);
+	// console.log(e.srcElement.duration);
 	const durInSecs = Math.round(e.srcElement.duration);
 	let secs = (durInSecs % 60).toString();
 	secs < 10 ? (secs = secs.padStart(2, '0')) : secs;
-	console.log(secs);
+	// console.log(secs);
 	let mins = Math.floor(durInSecs / 60).toString();
 	mins < 10 ? (mins = mins.padStart(2, '0')) : mins;
-	console.log(mins);
+	// console.log(mins);
 	songTime.innerHTML = `${mins}:${secs}`;
 	// mins || secs === NaN
 	// 	? (songTime.innerHTML = '')
@@ -253,7 +254,7 @@ function getCurrentTime(e) {
 function updateProgressBar(e) {
 	const { currentTime, duration } = e.srcElement;
 	let percentPlayed = Math.round((currentTime / duration) * 100);
-	console.log(percentPlayed);
+	// console.log(percentPlayed);
 	progressBar.style.width = `${percentPlayed}%`;
 }
 
