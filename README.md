@@ -1,6 +1,6 @@
 ![Screenshot](terror-fi-logo.png)
 
-Project Link: [Loopy Lotto](https://bit.ly/terror-fi)
+Project Link: [TERROR-Fi](https://bit.ly/terror-fi)
 
 # TERROR-Fi
 
