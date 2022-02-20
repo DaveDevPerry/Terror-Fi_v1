@@ -1,1 +1,3 @@
-# Terror-Fi_v1
+# TERROR-Fi
+
+![Screenshot](terror-fi-logo.png)
