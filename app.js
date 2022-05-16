@@ -41,14 +41,6 @@ const curTime = document.querySelector('#current-time');
 const songTime = document.querySelector('#song-time');
 const progressBar = document.querySelector('#progress');
 
-// Song titles
-// const songs = [
-// 	'04 Discotheque Wreck',
-// 	'08 Dog Chewed the Handle',
-// 	'09 Rock Radio',
-// 	'14 When I Die',
-// ];
-
 let songs = [
 	'01 (Not So) Hot',
 	'02 You Talk Too Much',
@@ -58,22 +50,21 @@ let songs = [
 	'02 Going Down Again',
 	'03 Stuck In A Rut',
 	"04 Crawlin' On Broken Glass",
-	'01 Pain Reliever',
+	// '01 Pain Reliever',
 	'02 Past Times',
 	'03 Ignorance',
-	'01 Urban Space Crime',
-	'02 My House',
-	'03 Jason',
+	// '01 Urban Space Crime',
+	// '02 My House',
+	// '03 Jason',
 	'01 Brand New Toy',
 	'02 Human Error',
-	'03 Pain Reliever',
+	// '03 Pain Reliever',
 	'04 The Pilgrims Rest',
 	'01 Under the Moon of Love',
 	'14 Bring Your Daughter To The Slaughter',
 	"09 Keep On Movin'",
 ];
-songs = songs.sort(() => Math.random() - 0.5);
-// const songs = [
+// let songs = [
 // 	'01 (Not So) Hot',
 // 	'02 You Talk Too Much',
 // 	'03 I Could Die',
@@ -96,15 +87,12 @@ songs = songs.sort(() => Math.random() - 0.5);
 // 	'14 Bring Your Daughter To The Slaughter',
 // 	"09 Keep On Movin'",
 // ];
+songs = songs.sort(() => Math.random() - 0.5);
 
 const randomFirstTrack = Math.floor(Math.random() * songs.length);
-// console.log('random ', randomFirstTrack);
-// Keep track of song
-// let songIndex = 20;
-let songIndex = randomFirstTrack;
-// let songIndex = Math.floor(Math.random() * songIndex.length);
 
-// window.addEventListener('load', loader);
+let songIndex = randomFirstTrack;
+
 window.addEventListener('DOMContentLoaded', tvLoader);
 
 // Initially load song details into DOM
@@ -147,22 +135,6 @@ mediaToDisplay.forEach((media) => {
 		displayMedia(media.id);
 	});
 });
-
-// turnTableBtn.addEventListener(){
-// 	toggleMediaMenu(menuStatus)
-// 	menuStatus = false;
-// 	// run record
-// }
-// discBtn.addEventListener(){
-// 	toggleMediaMenu(menuStatus)
-// 	menuStatus = false;
-// 	// run cd
-// }
-// cassetteBtn.addEventListener(){
-// 	toggleMediaMenu(menuStatus)
-// 	menuStatus = false;
-// 	//run cassette
-// }
 
 function playMusic() {
 	const isPlaying = recordContainer.classList.contains('play');
